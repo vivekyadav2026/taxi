@@ -8,11 +8,11 @@
                 <div>
                     <a href="index.php" class="inline-flex flex-col items-start mb-6 group">
                         <div class="bg-white rounded-2xl p-2.5 shadow-lg border border-gray-100 group-hover:shadow-xl transition-all duration-300 transform group-hover:-translate-y-1 mb-3">
-                            <img src="assets/images/logo.png" alt="Logo" class="h-16 md:h-20 w-auto object-contain">
+                            <img src="assets/images/logo.png" alt="Raipur Taxi Logo" class="h-16 md:h-20 w-auto object-contain">
                         </div>
                         <span class="font-extrabold text-2xl tracking-tight text-white">Raipur<span class="text-primary">Taxi</span></span>
                     </a>
-                    <p class="text-gray-400 mb-6 leading-relaxed">Fast & Safe Taxi Booking Service in Raipur. We provide reliable and affordable rides across CG, MP, MH, AP, and OD.</p>
+                    <p class="text-gray-400 mb-6 leading-relaxed">Premium Taxi & Tour Travel Services in Raipur. We provide reliable outstation cabs, airport transfers, and customized Chhattisgarh tour packages.</p>
                     <div class="flex space-x-4">
                         <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-secondary transition-all hover:-translate-y-1"><i class="fa-brands fa-facebook-f"></i></a>
                         <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-secondary transition-all hover:-translate-y-1"><i class="fa-brands fa-twitter"></i></a>
@@ -27,10 +27,10 @@
                     <ul class="space-y-3">
                         <li><a href="index.php" class="text-gray-400 hover:text-primary transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> Home</a></li>
                         <li><a href="about.php" class="text-gray-400 hover:text-primary transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> About Us</a></li>
+                        <li><a href="tours.php" class="text-gray-400 hover:text-primary transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> Tours & Sightseeing</a></li>
                         <li><a href="services.php" class="text-gray-400 hover:text-primary transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> Our Services</a></li>
                         <li><a href="driver-registration.php" class="text-gray-400 hover:text-primary transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> Drive With Us</a></li>
                         <li><a href="contact.php" class="text-gray-400 hover:text-primary transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> Contact Us</a></li>
-                        <li><a href="admin.php" class="text-gray-400 hover:text-primary transition flex items-center gap-2"><i class="fa-solid fa-user-shield text-[10px]"></i> Admin Portal</a></li>
                     </ul>
                 </div>
 
@@ -38,11 +38,11 @@
                 <div>
                     <h3 class="text-lg font-bold mb-6 text-white border-b border-gray-800 pb-2 inline-block">Our Services</h3>
                     <ul class="space-y-3">
+                        <li><a href="foreign-tourists.php" class="text-gray-400 hover:text-primary transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> Foreign Tourist Guides</a></li>
+                        <li><a href="tours.php" class="text-gray-400 hover:text-primary transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> Chhattisgarh Tour Packages</a></li>
                         <li><a href="services.php" class="text-gray-400 hover:text-primary transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> Local Rides</a></li>
-                        <li><a href="services.php" class="text-gray-400 hover:text-primary transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> Outstation Trips</a></li>
                         <li><a href="services.php" class="text-gray-400 hover:text-primary transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> Airport Transfers</a></li>
                         <li><a href="services.php" class="text-gray-400 hover:text-primary transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> Corporate Travel</a></li>
-                        <li><a href="services.php" class="text-gray-400 hover:text-primary transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> Hourly Rentals</a></li>
                     </ul>
                 </div>
 

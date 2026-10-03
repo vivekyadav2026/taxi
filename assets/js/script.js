@@ -385,26 +385,27 @@ window.handleBookingSubmit = function(event) {
     }
 
     const selectedOption = carSelect.options[carSelect.selectedIndex];
-    const rate = parseFloat(selectedOption.getAttribute('data-rate') || 0);
-    const carName = selectedOption.text.split('(')[0].trim();
+    const carName = selectedOption.text.split('-')[0].trim(); // Get 'Swift Dzire', etc.
+    
+    // Improved WhatsApp Message Formatting
+    const message = `*🚕 New Taxi Booking Request*
 
-    // Dynamically calculate estimated distance based on pickup/drop string lengths to make it feel reactive
-    const computedDistance = Math.abs(pickup.length - drop.length) * 6 + 12; // Realistic range: 12km to 150km
+*📍 Pickup:* ${pickup}
+*🏁 Drop:* ${drop}
 
-    window.currentBookingData = {
-        pickup,
-        drop,
-        date,
-        time,
-        carValue: carSelect.value,
-        carName,
-        mobile,
-        rate,
-        distance: computedDistance
-    };
+*📅 Date:* ${date}
+*⏰ Time:* ${time}
+*🚘 Car Type:* ${carName}
 
-    recalculateBookingCosts();
-    openBookingModal();
+*📱 Mobile:* ${mobile}
+
+Please confirm my booking.`;
+
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/919575955655?text=${encodedMessage}`;
+    
+    // Redirect to WhatsApp
+    window.open(whatsappUrl, '_blank');
 };
 
 function recalculateBookingCosts() {

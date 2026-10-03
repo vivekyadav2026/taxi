@@ -1,4 +1,9 @@
-<?php include 'header.php'; ?>
+<?php 
+$page_title = "Our Services | Outstation Taxi, Airport Cabs & Tour Packages in Raipur";
+$meta_desc = "Explore our wide range of services including local taxi rides, outstation cabs, airport transfers, corporate travel, and customized Chhattisgarh tour packages.";
+$meta_keywords = "Raipur Taxi Services, Airport Taxi Raipur, Outstation Cabs Raipur, Corporate Travel Raipur";
+include 'header.php'; 
+?>
 
 <!-- Page Header -->
 <section class="pt-32 pb-20 bg-gray-900 relative overflow-hidden">

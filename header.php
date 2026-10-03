@@ -3,11 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RaipurTaxi - Best Taxi Service & Cab Booking in Raipur</title>
+<?php
+// Default SEO Meta Tags
+$seo_title = isset($page_title) ? $page_title : "Raipur Taxi & Tour Travel | Chhattisgarh & India Tours";
+$seo_desc = isset($meta_desc) ? $meta_desc : "Book reliable taxi, sightseeing and customized tour services in Raipur, Chhattisgarh and across India. Explore India with local travel assistance and airport transfers.";
+$seo_keys = isset($meta_keywords) ? $meta_keywords : "Raipur Taxi, Raipur Tour and Travel, Chhattisgarh Tour Packages, India Tour Packages, Raipur Travel Agency";
+$seo_canonical = isset($canonical_url) ? $canonical_url : "https://raipurtaxi.com" . $_SERVER['REQUEST_URI'];
+?>
+    <title><?php echo $seo_title; ?></title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    <link rel="apple-touch-icon" href="assets/images/logo.png">
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Book affordable and reliable taxi services in Raipur with RaipurTaxi. Safe, professional drivers, 24/7 airport pickups, and outstation cabs. Get instant quotes.">
-    <meta name="keywords" content="Raipur Taxi, RaipurTaxi, Taxi Service in Raipur, Cab Service Raipur, Taxi Booking Raipur, Outstation Cabs Raipur, Airport Taxi Raipur">
+    <meta name="description" content="<?php echo $seo_desc; ?>">
+    <meta name="keywords" content="<?php echo $seo_keys; ?>">
+    <link rel="canonical" href="<?php echo $seo_canonical; ?>">
+    
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="<?php echo $seo_title; ?>">
+    <meta property="og:description" content="<?php echo $seo_desc; ?>">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="<?php echo $seo_canonical; ?>">
+
+    <?php if(isset($schema_data)): ?>
+    <!-- Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+    <?php echo $schema_data; ?>
+    </script>
+    <?php endif; ?>
     
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -65,12 +90,13 @@
                 </div>
 
                 <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
-                    <a href="index.php" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-semibold transition" data-translate="nav-home">Home</a>
-                    <a href="about.php" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-semibold transition" data-translate="nav-about">About</a>
-                    <a href="services.php" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-semibold transition" data-translate="nav-services">Services</a>
-                    <a href="driver-registration.php" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-semibold transition" data-translate="nav-drive">Drive With Us</a>
-                    <a href="contact.php" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-semibold transition" data-translate="nav-contact">Contact</a>
+                <div class="hidden lg:flex items-center space-x-5 text-sm">
+                    <a href="index.php" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-semibold transition whitespace-nowrap" data-translate="nav-home">Home</a>
+                    <a href="about.php" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-semibold transition whitespace-nowrap" data-translate="nav-about">About</a>
+                    <a href="tours.php" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-semibold transition whitespace-nowrap" data-translate="nav-tours">Tours</a>
+                    <a href="services.php" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-semibold transition whitespace-nowrap" data-translate="nav-services">Services</a>
+                    <a href="driver-registration.php" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-semibold transition whitespace-nowrap" data-translate="nav-drive">Drive</a>
+                    <a href="contact.php" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-semibold transition whitespace-nowrap" data-translate="nav-contact">Contact</a>
                     
                     <!-- Language Switcher -->
                     <button id="lang-toggle" class="px-2.5 py-1.5 flex items-center gap-1.5 rounded-full border border-gray-300 dark:border-gray-650 hover:bg-gray-100 dark:hover:bg-gray-800 transition text-xs font-bold text-gray-700 dark:text-gray-300 hover:border-primary">
@@ -91,7 +117,7 @@
                 </div>
 
                 <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center gap-3">
+                <div class="lg:hidden flex items-center gap-3">
                     <!-- Language Switcher Mobile -->
                     <button id="lang-toggle-mobile" class="px-2 py-1 flex items-center gap-1 rounded-full border border-gray-300 dark:border-gray-650 hover:bg-gray-100 dark:hover:bg-gray-800 transition text-xs font-bold text-gray-700 dark:text-gray-300">
                         <i class="fa-solid fa-globe text-primary text-xs"></i>
@@ -110,10 +136,11 @@
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="md:hidden hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
+        <div id="mobile-menu" class="lg:hidden hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="index.php" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800" data-translate="nav-home">Home</a>
                 <a href="about.php" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800" data-translate="nav-about">About</a>
+                <a href="tours.php" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800" data-translate="nav-tours">Tours</a>
                 <a href="services.php" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800" data-translate="nav-services">Services</a>
                 <a href="driver-registration.php" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800" data-translate="nav-drive">Drive with us</a>
                 <a href="contact.php" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800" data-translate="nav-contact">Contact</a>

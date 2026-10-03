@@ -97,17 +97,17 @@ body {
 
 /* Modern Card Hover */
 .hover-card-effect {
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
 }
 
 .hover-card-effect:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
 }
 
 .dark .hover-card-effect:hover {
-    box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.4);
-    border-color: #FFD700;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Floating WhatsApp */

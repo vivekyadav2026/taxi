@@ -1,168 +1,176 @@
-<?php include 'header.php'; ?>
+<?php 
+$page_title = "Raipur Taxi & Tour Travel Services | Chhattisgarh Tours";
+$meta_desc = "Book reliable taxi, sightseeing and customized tour services in Raipur, Chhattisgarh and across India. Explore India with local travel assistance and airport transfers.";
+$meta_keywords = "Raipur Taxi, Raipur Cab Service, Raipur Tour Packages, Raipur Travel Agency, Chhattisgarh Tour Packages";
+$schema_data = '{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TravelAgency",
+      "name": "Raipur Taxi & Tour Travel",
+      "image": "https://raipurtaxi.com/assets/images/logo.png",
+      "description": "Premium taxi and tour travel agency in Raipur providing local sightseeing, outstation cabs, and customized Chhattisgarh tour packages.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Raipur",
+        "addressLocality": "Raipur",
+        "addressRegion": "Chhattisgarh",
+        "postalCode": "492001",
+        "addressCountry": "IN"
+      },
+      "telephone": "+919575955655",
+      "priceRange": "₹₹",
+      "url": "https://raipurtaxi.com"
+    }
+  ]
+}';
+
+include 'header.php'; 
+?>
 
 <!-- Hero Section -->
-<section class="relative bg-gray-900 overflow-hidden" id="home">
-    <!-- Background Image -->
-    <div class="absolute inset-0">
-        <img src="assets/images/hero.png" alt="Taxi Background" class="w-full h-full object-cover opacity-50">
-        <div class="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/80 to-transparent"></div>
+<section class="relative bg-gray-900 border-b border-gray-800 pt-32 pb-8 md:pt-20 md:pb-10" id="home">
+    <!-- Banner Background -->
+    <div class="absolute inset-0 z-0 overflow-hidden bg-gray-900">
+        <!-- Mobile Background Image -->
+        <img src="assets/images/hero_mobile.jpg" alt="Taxi Service Banner Mobile" class="w-full h-full object-cover object-top block md:hidden">
+        <!-- Desktop Background Image -->
+        <img src="assets/images/hero_girl.jpg" alt="Raipur Taxi and Tours" class="w-full h-full object-cover object-right -scale-x-100 hidden md:block">
+        
+        <!-- Gradient overlay: Bottom-to-top on mobile, Right-to-left on desktop -->
+        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/80 to-gray-900/50 md:bg-gradient-to-l md:from-gray-900/90 md:via-gray-900/50 md:to-transparent"></div>
     </div>
 
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 flex flex-col lg:flex-row items-center">
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-end">
         
-        <!-- Hero Text -->
-        <div class="w-full lg:w-1/2 text-white mb-12 lg:mb-0 z-10">
-            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight sm:leading-none mb-4">
-                Fast & Safe <span class="text-primary drop-shadow-[0_0_10px_rgba(255,215,0,0.5)]">Taxi Booking</span> Service
-            </h1>
-            <p class="text-base sm:text-lg md:text-xl text-gray-300 mb-6 sm:mb-8 max-w-lg leading-relaxed">
-                Book local and outstation rides instantly with RaipurTaxi at affordable prices.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                <a href="#book" class="bg-gradient-to-r from-yellow-400 to-yellow-600 text-gray-900 px-6 py-3 sm:px-8 sm:py-3.5 rounded-full font-bold text-base sm:text-lg hover:from-yellow-300 hover:to-yellow-500 hover:shadow-[0_0_20px_rgba(255,215,0,0.4)] transition-all duration-300 transform hover:-translate-y-1 text-center">
-                    Book Now
-                </a>
-                <a href="https://wa.me/919575955655?text=Hi%2C%20I%20want%20to%20book%20a%20taxi." target="_blank" class="bg-[#25D366] text-white px-6 py-3 sm:px-8 sm:py-3.5 rounded-full font-bold text-base sm:text-lg hover:bg-[#1ebd5c] hover:shadow-[0_0_20px_rgba(37,211,102,0.4)] transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-2">
-                    <i class="fa-brands fa-whatsapp text-xl"></i> WhatsApp Booking
-                </a>
+        <!-- Right Side: Text & Compact Form -->
+        <div class="w-full max-w-md">
+            
+            <!-- Hero Text -->
+            <div class="mb-6 text-center md:text-left">
+                <span class="inline-block py-1 px-3 rounded-full bg-primary/20 text-primary text-[10px] font-bold tracking-wider mb-2 border border-primary/30 uppercase backdrop-blur-sm">Taxi & Tours</span>
+                <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight leading-tight mb-2 text-white drop-shadow-lg">
+                    Raipur Taxi & <span class="text-primary">Tour Travel</span>
+                </h1>
+                <p class="text-sm md:text-base text-gray-100 drop-shadow-md">
+                    Explore Raipur, Chhattisgarh & India with reliable taxi, sightseeing and customized tour services.
+                </p>
             </div>
             
-            <div class="mt-8 sm:mt-10 flex items-center gap-4">
-                <div class="flex -space-x-3">
-                    <img class="w-10 h-10 rounded-full border-2 border-gray-800" src="https://i.pravatar.cc/100?img=1" alt="User">
-                    <img class="w-10 h-10 rounded-full border-2 border-gray-800" src="https://i.pravatar.cc/100?img=2" alt="User">
-                    <img class="w-10 h-10 rounded-full border-2 border-gray-800" src="https://i.pravatar.cc/100?img=3" alt="User">
-                    <img class="w-10 h-10 rounded-full border-2 border-gray-800" src="https://i.pravatar.cc/100?img=4" alt="User">
-                </div>
-                <div class="text-sm">
-                    <div class="flex text-primary">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                    </div>
-                    <p class="text-gray-300"><span class="font-bold text-white">5000+</span> Trusted Customers</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Booking Form -->
-        <div class="w-full lg:w-1/2 flex justify-center lg:justify-end z-10" id="book">
-            <div class="glass-card dark:glass-dark rounded-3xl p-6 sm:p-8 w-full max-w-md hover-card-effect relative">
-                <!-- Decorative element -->
-                <div class="absolute -top-4 -right-4 bg-primary text-secondary p-3 rounded-2xl shadow-lg transform rotate-12">
-                    <i class="fa-solid fa-car-side text-2xl"></i>
-                </div>
-                
-                <h3 class="text-xl sm:text-2xl font-bold mb-6 text-gray-800 dark:text-white border-b border-gray-200 dark:border-gray-700 pb-4" data-translate="book-ride-title">Book Your Ride</h3>
-                
-                <form id="booking-form" class="space-y-4" onsubmit="handleBookingSubmit(event)">
-                    <div class="relative">
-                        <i class="fa-solid fa-location-dot absolute top-3.5 left-3 text-gray-400"></i>
-                        <input type="text" id="pickup_location" placeholder="Pickup Location" required class="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-primary focus:border-transparent outline-none bg-white dark:bg-gray-800 text-gray-800 dark:text-white transition">
-                    </div>
-                    
-                    <div class="relative">
-                        <i class="fa-solid fa-location-crosshairs absolute top-3.5 left-3 text-gray-400"></i>
-                        <input type="text" id="drop_location" placeholder="Drop Location" required class="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-primary focus:border-transparent outline-none bg-white dark:bg-gray-800 text-gray-800 dark:text-white transition">
-                    </div>
-
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="relative">
-                            <i class="fa-solid fa-calendar-days absolute top-3.5 left-3 text-gray-400"></i>
-                            <input type="date" id="booking_date" required class="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-primary focus:border-transparent outline-none bg-white dark:bg-gray-800 text-gray-800 dark:text-white transition">
+            <!-- Booking Form -->
+            <div id="book" class="bg-white/10 backdrop-blur-xl rounded-2xl p-5 shadow-2xl border border-white/20">
+                <form id="booking-form" class="space-y-3" onsubmit="handleBookingSubmit(event)">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div>
+                            <input type="text" id="pickup_location" placeholder="Pickup Location" required class="w-full px-4 py-2.5 rounded-xl border border-white/20 bg-white/5 text-white placeholder-gray-400 focus:bg-white/10 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-sm">
                         </div>
-                        <div class="relative">
-                            <i class="fa-regular fa-clock absolute top-3.5 left-3 text-gray-400"></i>
-                            <input type="time" id="booking_time" required class="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-primary focus:border-transparent outline-none bg-white dark:bg-gray-800 text-gray-800 dark:text-white transition">
+                        <div>
+                            <input type="text" id="drop_location" placeholder="Drop Location" required class="w-full px-4 py-2.5 rounded-xl border border-white/20 bg-white/5 text-white placeholder-gray-400 focus:bg-white/10 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-sm">
                         </div>
                     </div>
 
-                    <div class="relative">
-                        <i class="fa-solid fa-car absolute top-3.5 left-3 text-gray-400"></i>
-                        <select id="car_type" required class="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-primary focus:border-transparent outline-none bg-white dark:bg-gray-800 text-gray-800 dark:text-white transition appearance-none">
+                    <div class="grid grid-cols-2 gap-3">
+                        <div>
+                            <input type="date" id="booking_date" required class="w-full px-4 py-2.5 rounded-xl border border-white/20 bg-white/5 text-white placeholder-gray-400 focus:bg-white/10 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-sm [color-scheme:dark]">
+                        </div>
+                        <div>
+                            <input type="time" id="booking_time" required class="w-full px-4 py-2.5 rounded-xl border border-white/20 bg-white/5 text-white placeholder-gray-400 focus:bg-white/10 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-sm [color-scheme:dark]">
+                        </div>
+                    </div>
+
+                    <div>
+                        <select id="car_type" required class="w-full px-4 py-2.5 rounded-xl border border-white/20 bg-[#2a303c] text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-sm">
                             <option value="" disabled selected>Select Car Type</option>
-                            <option value="dzire" data-rate="15">Swift Dzire (Sedan 4+1) - ₹15/km</option>
-                            <option value="ertiga" data-rate="20">Maruti Ertiga (SUV 6+1) - ₹20/km</option>
-                            <option value="innova" data-rate="25">Toyota Innova (SUV 6+1) - ₹25/km</option>
-                            <option value="crysta" data-rate="26">Innova Crysta (Premium 7+1) - ₹26/km</option>
-                            <option value="tempo" data-rate="32">Tempo Traveller (12-17 Seats) - ₹32/km</option>
+                            <option value="dzire" data-rate="15">Swift Dzire - ₹15/km</option>
+                            <option value="ertiga" data-rate="20">Maruti Ertiga - ₹20/km</option>
+                            <option value="innova" data-rate="25">Toyota Innova - ₹25/km</option>
+                            <option value="crysta" data-rate="26">Innova Crysta - ₹26/km</option>
+                            <option value="tempo" data-rate="32">Tempo Traveller - ₹32/km</option>
                         </select>
-                        <i class="fa-solid fa-chevron-down absolute top-4 right-4 text-gray-400 pointer-events-none"></i>
                     </div>
 
-                    <div class="relative">
-                        <i class="fa-solid fa-phone absolute top-3.5 left-3 text-gray-400"></i>
-                        <input type="tel" id="mobile_number" placeholder="Mobile Number" required class="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-primary focus:border-transparent outline-none bg-white dark:bg-gray-800 text-gray-800 dark:text-white transition">
+                    <div>
+                        <input type="tel" id="mobile_number" placeholder="Mobile Number" required class="w-full px-4 py-2.5 rounded-xl border border-white/20 bg-white/5 text-white placeholder-gray-400 focus:bg-white/10 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-sm">
                     </div>
 
-                    <div class="relative flex gap-2">
-                        <div class="relative flex-grow">
-                            <i class="fa-solid fa-ticket absolute top-3.5 left-3 text-gray-400"></i>
-                            <input type="text" id="coupon_code" placeholder="Coupon Code (e.g. WELCOME10)" class="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-primary focus:border-transparent outline-none bg-white dark:bg-gray-800 text-gray-800 dark:text-white transition uppercase">
-                        </div>
-                        <button type="button" onclick="applyCoupon()" class="bg-secondary text-primary dark:bg-primary dark:text-secondary px-4 rounded-xl font-bold hover:opacity-90 transition text-sm">Apply</button>
-                    </div>
-                    <div id="coupon-message" class="text-xs font-semibold hidden pl-2"></div>
-
-                    <button type="submit" class="w-full bg-secondary text-primary dark:bg-primary dark:text-secondary py-3 rounded-xl font-bold text-lg hover:shadow-lg transition mt-4 hover:opacity-90" data-translate="btn-confirm">
+                    <button type="submit" class="w-full bg-primary text-gray-900 py-3 rounded-xl font-bold hover:bg-yellow-500 hover:shadow-[0_0_15px_rgba(255,215,0,0.3)] transition-all mt-2 text-sm" data-translate="btn-confirm">
                         Confirm Booking
                     </button>
                 </form>
+            </div>
+            
+            <div class="mt-5 flex flex-wrap gap-3 items-center justify-center md:justify-start">
+                <a href="tel:+919575955655" class="inline-flex items-center justify-center gap-2 bg-white/5 hover:bg-white/15 border border-white/10 backdrop-blur-md px-3.5 py-1.5 rounded-full text-white text-[11px] uppercase font-bold tracking-wider transition-all shadow-lg hover:shadow-blue-500/20 group">
+                    <div class="w-6 h-6 rounded-full bg-blue-500/20 border border-blue-400/30 flex items-center justify-center text-blue-400 text-[10px] group-hover:bg-blue-500 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    Call Now
+                </a>
+                <a href="https://wa.me/919575955655?text=Hi%2C%20I%20want%20to%20book%20a%20taxi." target="_blank" class="inline-flex items-center justify-center gap-2 bg-white/5 hover:bg-white/15 border border-white/10 backdrop-blur-md px-3.5 py-1.5 rounded-full text-white text-[11px] uppercase font-bold tracking-wider transition-all shadow-lg hover:shadow-[#25D366]/20 group">
+                    <div class="w-6 h-6 rounded-full bg-[#25D366]/20 border border-[#25D366]/30 flex items-center justify-center text-[#25D366] text-[11px] group-hover:bg-[#25D366] group-hover:text-white transition-colors">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    WhatsApp
+                </a>
             </div>
         </div>
     </div>
 </section>
 
 <!-- Features Section -->
-<section class="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-16">
-            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-gray-800 dark:text-white">Why Choose <span class="text-primary">RaipurTaxi</span>?</h2>
-            <p class="text-gray-650 dark:text-gray-400 text-base sm:text-lg">We provide the best features to ensure your journey is safe, comfortable, and reliable.</p>
+<section class="py-12 md:py-16 bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div class="text-center max-w-3xl mx-auto mb-10 md:mb-12">
+            <span class="inline-block py-1.5 px-4 rounded-full bg-primary/10 text-yellow-600 dark:text-primary text-xs font-bold tracking-wider mb-4 border border-primary/20 uppercase">Our Benefits</span>
+            <h2 class="text-3xl md:text-4xl font-extrabold mb-6 text-gray-900 dark:text-white">Why Choose Us?</h2>
+            <p class="text-lg text-gray-600 dark:text-gray-400">Experience the difference with our simple, reliable, and highly comfortable journey features designed specifically for you.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <!-- Feature 1 -->
-            <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-2xl text-center hover-card-effect border border-gray-100 dark:border-gray-700">
-                <div class="w-16 h-16 mx-auto bg-primary/20 text-primary rounded-2xl flex items-center justify-center text-2xl mb-6 transform rotate-3">
+            <div class="group bg-gray-50 dark:bg-gray-800/50 p-8 rounded-3xl border border-gray-100 dark:border-gray-700 hover:bg-white dark:hover:bg-gray-800 hover:shadow-2xl hover:shadow-gray-200/50 dark:hover:shadow-black/50 hover:-translate-y-2 transition-all duration-300">
+                <div class="w-14 h-14 bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-primary group-hover:text-gray-900 transition-colors duration-300">
                     <i class="fa-solid fa-location-crosshairs"></i>
                 </div>
-                <h3 class="text-xl font-bold mb-3 text-gray-800 dark:text-white">GPS Tracking</h3>
-                <p class="text-gray-600 dark:text-gray-400">Track your ride in real-time and share your location with loved ones for safety.</p>
+                <h3 class="text-xl font-bold mb-3 text-gray-900 dark:text-white">GPS Tracking</h3>
+                <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">Track your ride in real-time and securely share your live location with friends or family for complete peace of mind.</p>
             </div>
             
             <!-- Feature 2 -->
-            <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-2xl text-center hover-card-effect border border-gray-100 dark:border-gray-700">
-                <div class="w-16 h-16 mx-auto bg-primary/20 text-primary rounded-2xl flex items-center justify-center text-2xl mb-6 transform -rotate-3">
+            <div class="group bg-gray-50 dark:bg-gray-800/50 p-8 rounded-3xl border border-gray-100 dark:border-gray-700 hover:bg-white dark:hover:bg-gray-800 hover:shadow-2xl hover:shadow-gray-200/50 dark:hover:shadow-black/50 hover:-translate-y-2 transition-all duration-300">
+                <div class="w-14 h-14 bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-primary group-hover:text-gray-900 transition-colors duration-300">
                     <i class="fa-solid fa-headset"></i>
                 </div>
-                <h3 class="text-xl font-bold mb-3 text-gray-800 dark:text-white">24/7 Service</h3>
-                <p class="text-gray-600 dark:text-gray-400">Our customer support and taxi services are available around the clock.</p>
+                <h3 class="text-xl font-bold mb-3 text-gray-900 dark:text-white">24/7 Service</h3>
+                <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">Our premium taxi services and dedicated customer support are available around the clock to assist you anytime.</p>
             </div>
 
             <!-- Feature 3 -->
-            <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-2xl text-center hover-card-effect border border-gray-100 dark:border-gray-700">
-                <div class="w-16 h-16 mx-auto bg-primary/20 text-primary rounded-2xl flex items-center justify-center text-2xl mb-6 transform rotate-3">
+            <div class="group bg-gray-50 dark:bg-gray-800/50 p-8 rounded-3xl border border-gray-100 dark:border-gray-700 hover:bg-white dark:hover:bg-gray-800 hover:shadow-2xl hover:shadow-gray-200/50 dark:hover:shadow-black/50 hover:-translate-y-2 transition-all duration-300">
+                <div class="w-14 h-14 bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-primary group-hover:text-gray-900 transition-colors duration-300">
                     <i class="fa-solid fa-shield-halved"></i>
                 </div>
-                <h3 class="text-xl font-bold mb-3 text-gray-800 dark:text-white">Secure Payment</h3>
-                <p class="text-gray-600 dark:text-gray-400">Multiple secure payment options including UPI, Cards, and Cash.</p>
+                <h3 class="text-xl font-bold mb-3 text-gray-900 dark:text-white">Secure Payment</h3>
+                <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">Enjoy hassle-free checkout with multiple highly secure payment options including UPI, Credit Cards, and Cash.</p>
             </div>
 
             <!-- Feature 4 -->
-            <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-2xl text-center hover-card-effect border border-gray-100 dark:border-gray-700">
-                <div class="w-16 h-16 mx-auto bg-primary/20 text-primary rounded-2xl flex items-center justify-center text-2xl mb-6 transform -rotate-3">
+            <div class="group bg-gray-50 dark:bg-gray-800/50 p-8 rounded-3xl border border-gray-100 dark:border-gray-700 hover:bg-white dark:hover:bg-gray-800 hover:shadow-2xl hover:shadow-gray-200/50 dark:hover:shadow-black/50 hover:-translate-y-2 transition-all duration-300">
+                <div class="w-14 h-14 bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-primary group-hover:text-gray-900 transition-colors duration-300">
                     <i class="fa-solid fa-id-card"></i>
                 </div>
-                <h3 class="text-xl font-bold mb-3 text-gray-800 dark:text-white">Verified Drivers</h3>
-                <p class="text-gray-600 dark:text-gray-400">Professional, experienced, and background-verified drivers for a safe trip.</p>
+                <h3 class="text-xl font-bold mb-3 text-gray-900 dark:text-white">Verified Drivers</h3>
+                <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">Travel with confidence knowing all our drivers are professional, highly experienced, and strictly background-verified.</p>
             </div>
         </div>
     </div>
 </section>
 
 <!-- Fleet & Cars Section -->
-<section class="py-20 bg-white dark:bg-gray-900 transition-colors duration-300" id="fleet">
+<section class="py-12 md:py-16 bg-white dark:bg-gray-900 transition-colors duration-300" id="fleet">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="text-center max-w-3xl mx-auto mb-10 md:mb-12">
             <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-gray-800 dark:text-white" data-translate="fleet-title">Our Available <span class="text-primary">Fleet</span></h2>
             <p class="text-gray-650 dark:text-gray-400 text-base sm:text-lg" data-translate="fleet-desc">Choose from our modern, clean, and extremely well-maintained vehicles for a safe journey.</p>
         </div>
@@ -356,7 +364,7 @@
 </section>
 
 <!-- Pricing & Rates Section -->
-<section class="py-20 bg-gray-50 dark:bg-gray-800 transition-colors duration-300" id="pricing">
+<section class="py-12 md:py-16 bg-gray-50 dark:bg-gray-800 transition-colors duration-300" id="pricing">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-3xl mx-auto mb-12">
             <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-gray-800 dark:text-white" data-translate="pricing-title">Transparent <span class="text-primary">Fare</span> Rates</h2>
@@ -544,10 +552,33 @@
     </div>
 </section>
 
+<!-- Explore Tourism CTA Section -->
+<section class="py-16 md:py-20 relative bg-gray-900 border-y border-gray-800">
+    <div class="absolute inset-0 z-0">
+        <img src="assets/images/tours/chitrakote-waterfalls.jpg" alt="Chhattisgarh Tourism" class="w-full h-full object-cover opacity-30" onerror="this.src='assets/images/taxi_right.jpg'">
+        <div class="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/90 to-transparent"></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+        <div class="max-w-2xl text-center md:text-left">
+            <span class="inline-block py-1.5 px-4 rounded-full bg-primary/20 text-primary text-xs font-bold tracking-wider mb-4 border border-primary/30 uppercase">Tour & Travel Service</span>
+            <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-4 drop-shadow-lg leading-tight">Explore the Beauty of <span class="text-primary">Chhattisgarh</span></h2>
+            <p class="text-lg text-gray-300 mb-8">From majestic waterfalls like Chitrakote to ancient historical sites and thrilling jungle safaris, discover the best places in and around Raipur. Book our customized tour packages and outstation cabs for a memorable journey.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                <a href="tours.php" class="bg-primary text-gray-900 px-8 py-3.5 rounded-full font-bold hover:bg-yellow-500 transition shadow-[0_0_15px_rgba(255,215,0,0.4)] flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-earth-asia text-lg"></i> Explore Tour Packages
+                </a>
+                <a href="tel:+919575955655" class="bg-white/10 text-white border border-white/20 px-8 py-3.5 rounded-full font-bold hover:bg-white/20 transition backdrop-blur-sm flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-phone"></i> Call for Queries
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Testimonials -->
-<section class="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
+<section class="py-12 md:py-16 bg-white dark:bg-gray-900 transition-colors duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="text-center max-w-3xl mx-auto mb-10 md:mb-12">
             <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-gray-800 dark:text-white">Trusted by <span class="text-primary">Customers</span></h2>
             <p class="text-gray-650 dark:text-gray-400 text-base sm:text-lg">See what our happy customers have to say about our service.</p>
         </div>
@@ -599,9 +630,9 @@
 </section>
 
 <!-- FAQ Section -->
-<section class="py-20 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
+<section class="py-12 md:py-16 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
+        <div class="text-center mb-10 md:mb-12">
             <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-gray-800 dark:text-white">Frequently Asked <span class="text-primary">Questions</span></h2>
             <p class="text-gray-650 dark:text-gray-400 text-base sm:text-lg">Got questions? We've got answers.</p>
         </div>
@@ -629,7 +660,7 @@
 </section>
 
 <!-- Active Bookings / Booking Management Section -->
-<section class="py-20 bg-white dark:bg-gray-900 transition-colors duration-300 hidden" id="booking-status-section">
+<section class="py-12 md:py-16 bg-white dark:bg-gray-900 transition-colors duration-300 hidden" id="booking-status-section">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
             <span class="bg-primary/20 text-yellow-600 dark:text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">BOOKING MANAGEMENT</span>
@@ -644,7 +675,7 @@
 </section>
 
 <!-- Web-App Showcase Section -->
-<section class="py-20 bg-gray-50 dark:bg-gray-850 transition-colors duration-300">
+<section class="py-12 md:py-16 bg-gray-50 dark:bg-gray-850 transition-colors duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="bg-gradient-to-br from-secondary via-gray-900 to-black rounded-[2.5rem] overflow-hidden p-8 md:p-16 relative shadow-2xl border border-gray-800">
             <!-- Light Glow -->
@@ -817,9 +848,9 @@
                 <button onclick="confirmBookingWhatsApp()" class="w-full bg-[#25D366] hover:bg-[#1ebd5c] text-white py-3.5 rounded-xl font-bold flex items-center justify-center gap-2 shadow-lg transition duration-300 transform hover:-translate-y-0.5">
                     <i class="fa-brands fa-whatsapp text-xl"></i> Confirm via WhatsApp Booking
                 </button>
-                <button onclick="confirmBookingOnline()" class="w-full bg-primary hover:bg-yellow-500 text-secondary py-3.5 rounded-xl font-bold flex items-center justify-center gap-2 shadow-lg transition duration-300 transform hover:-translate-y-0.5">
+                <!-- <button onclick="confirmBookingOnline()" class="w-full bg-primary hover:bg-yellow-500 text-secondary py-3.5 rounded-xl font-bold flex items-center justify-center gap-2 shadow-lg transition duration-300 transform hover:-translate-y-0.5">
                     <i class="fa-solid fa-cloud-arrow-up"></i> Submit Request & Track Online
-                </button>
+                </button> -->
             </div>
             
             <p class="text-[10px] text-gray-400 text-center mt-2 leading-relaxed">

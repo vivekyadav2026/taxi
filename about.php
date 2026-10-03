@@ -1,4 +1,9 @@
-<?php include 'header.php'; ?>
+<?php 
+$page_title = "About Us | Raipur Taxi & Tour Travel Agency";
+$meta_desc = "Learn about Raipur Taxi, the leading travel agency and cab service provider in Chhattisgarh. Safe, reliable, and trusted travel partners.";
+$meta_keywords = "About Raipur Taxi, Raipur Travel Agency, Best Taxi in Raipur";
+include 'header.php'; 
+?>
 
 <!-- Page Header -->
 <section class="pt-32 pb-20 bg-gray-900 relative overflow-hidden">

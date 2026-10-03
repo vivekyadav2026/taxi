@@ -1,0 +1,561 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_booking'])) {
+    $name = isset($_POST['fname']) ? trim($_POST['fname']) : '';
+    $phone = isset($_POST['fphone']) ? trim($_POST['fphone']) : '';
+    $car = isset($_POST['fcar']) ? trim($_POST['fcar']) : '';
+    $pickup = isset($_POST['fpickup']) ? trim($_POST['fpickup']) : '';
+    $drop = isset($_POST['fdrop']) ? trim($_POST['fdrop']) : '';
+    $date = isset($_POST['fdate']) ? trim($_POST['fdate']) : '';
+    $offer = isset($_POST['foffer']) ? trim($_POST['foffer']) : '';
+
+    $msg = "Hi, mujhe taxi book karni hai.\n" .
+           "Naam: " . $name . "\n" .
+           "Mobile: " . $phone . "\n" .
+           "Car: " . $car . "\n" .
+           "Pickup: " . $pickup . "\n" .
+           "Drop: " . $drop . "\n" .
+           "Date/Time: " . $date . "\n" .
+           "Offer Code: " . $offer;
+
+    // URL Encode karke WhatsApp link banayein
+    $whatsapp_url = "https://wa.me/919575955655?text=" . urlencode($msg);
+
+    // Redirect to WhatsApp
+    header("Location: " . $whatsapp_url);
+    exit();
+}
+?>
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raipur Taxi Booking | Outstation, Airport & Local Cab - Flat Offer</title>
+<meta name="description" content="Raipur me taxi book karein - Sedan ₹15/km se shuru. Airport transfer, outstation trips, tempo traveller. Verified drivers, 24/7 service. Abhi call ya WhatsApp karein.">
+<meta name="robots" content="index,follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- 1. Google tag (gtag.js) - Google Ads Tracking ke liye -->
+<!-- Note: 'AW-XXXXXXXXX' ko apne Google Ads ID se replace karein -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-XXXXXXXXX');
+</script>
+
+<!-- 2. Schema Markup (Structured Data) - Google ko Offers/Discounts samajhne ke liye -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TaxiService",
+  "name": "RaipurTaxi",
+  "url": "https://raipurtaxi.com",
+  "description": "Raipur ki sabse bharosemand Taxi Service — Ab ₹15/km se shuru.",
+  "telephone": "+919575955655",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Santoshi Nagar",
+    "addressLocality": "Raipur",
+    "addressRegion": "Chhattisgarh",
+    "postalCode": "492001",
+    "addressCountry": "IN"
+  },
+  "priceRange": "₹15 - ₹32 per km",
+  "makesOffer": [
+    {
+      "@type": "Offer",
+      "name": "15% OFF on Return Trip",
+      "description": "Return trip booking par 15% discount. Code: RETURN15",
+      "priceCurrency": "INR",
+      "availability": "https://schema.org/InStock"
+    },
+    {
+      "@type": "Offer",
+      "name": "Flat ₹200 OFF on First Booking",
+      "description": "Naye customers ke liye flat ₹200 discount. Code: NEW200",
+      "priceCurrency": "INR",
+      "availability": "https://schema.org/InStock"
+    },
+    {
+      "@type": "Offer",
+      "name": "₹150 OFF Refer & Earn",
+      "description": "Apne dost ko refer karein aur ₹150 off payein. Code: REFER150",
+      "priceCurrency": "INR",
+      "availability": "https://schema.org/InStock"
+    },
+    {
+      "@type": "Offer",
+      "name": "10% OFF on Group/Wedding Booking",
+      "description": "Tempo Traveller ya 2+ gaadiyon ki booking par 10% discount. Code: GROUP10",
+      "priceCurrency": "INR",
+      "availability": "https://schema.org/InStock"
+    }
+  ]
+}
+</script>
+
+<style>
+  :root{
+    --navy:#152238;
+    --navy-2:#1c2f4f;
+    --yellow:#F5B31D;
+    --yellow-deep:#D9950A;
+    --cream:#FDFBF6;
+    --charcoal:#22262B;
+    --green:#1F8A5F;
+    --red:#D64545;
+    --line:#e7e2d6;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Inter',sans-serif;
+    color:var(--charcoal);
+    background:var(--cream);
+    line-height:1.5;
+  }
+  h1,h2,h3,.display{font-family:'Baloo 2',sans-serif;}
+  img{max-width:100%; display:block;}
+  a{color:inherit;}
+  .wrap{max-width:1080px; margin:0 auto; padding:0 20px;}
+
+  /* Sticky call bar */
+  .callbar{
+    position:sticky; top:0; z-index:50;
+    background:var(--navy);
+    color:#fff;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:10px 16px;
+    gap:10px;
+  }
+  .callbar .brand{display:flex; align-items:center; gap:8px; font-family:'Baloo 2',sans-serif; font-weight:700; font-size:1.05rem;}
+  .callbar .brand .dot{width:8px;height:8px;border-radius:50%;background:var(--yellow);}
+  .callbar .actions{display:flex; gap:8px;}
+  .btn{
+    display:inline-flex; align-items:center; gap:6px;
+    padding:9px 16px; border-radius:8px; font-weight:700; font-size:.92rem;
+    text-decoration:none; border:none; cursor:pointer; white-space:nowrap;
+  }
+  .btn-call{background:var(--yellow); color:var(--navy);}
+  .btn-wa{background:var(--green); color:#fff;}
+  .btn-yellow{background:var(--yellow); color:var(--navy);}
+  .btn-lg{padding:14px 26px; font-size:1.02rem; border-radius:10px;}
+
+  /* Route line motif */
+  .route-divider{
+    height:26px; position:relative; overflow:hidden;
+    background:var(--navy);
+  }
+  .route-divider svg{width:100%; height:100%; display:block;}
+
+  /* Hero */
+  .hero{
+    background:
+      radial-gradient(circle at 85% 20%, rgba(245,179,29,0.18), transparent 45%),
+      linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%);
+    color:#fff;
+    padding:44px 0 56px;
+  }
+  .offer-badge{
+    display:inline-flex; align-items:center; gap:8px;
+    background:var(--red); color:#fff; font-weight:700; font-size:.85rem;
+    padding:7px 14px; border-radius:999px; margin-bottom:16px;
+    box-shadow:0 4px 14px rgba(214,69,69,0.35);
+  }
+  .hero h1{font-size:2.1rem; font-weight:800; line-height:1.25; max-width:640px;}
+  .hero h1 span{color:var(--yellow);}
+  .hero p.sub{margin-top:12px; font-size:1.05rem; color:#dbe1ec; max-width:560px;}
+  .hero .ctas{display:flex; flex-wrap:wrap; gap:12px; margin-top:22px;}
+  .trust-row{display:flex; flex-wrap:wrap; gap:22px; margin-top:30px; font-size:.88rem; color:#c9d2e2;}
+  .trust-row .item{display:flex; align-items:center; gap:7px;}
+  .trust-row .item .ico{color:var(--yellow); font-weight:800;}
+
+  /* Offer strip */
+  .offer-strip{
+    background:var(--yellow);
+    color:var(--navy);
+    text-align:center;
+    font-weight:700;
+    padding:12px 16px;
+    font-size:.95rem;
+  }
+  .offer-strip strong{color:var(--red);}
+
+  /* Offers grid */
+  .offers-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:16px;}
+  .offer-card{
+    background:#fff; border:1px solid var(--line); border-radius:12px; padding:22px;
+    position:relative; overflow:hidden; border-top:4px solid var(--yellow);
+  }
+  .offer-card.highlight{border-top-color:var(--green);}
+  .offer-card .offer-icon{font-size:1.6rem; margin-bottom:10px;}
+  .offer-card .offer-value{
+    font-family:'Baloo 2',sans-serif; font-weight:800; font-size:1.5rem; color:var(--navy); margin-bottom:4px;
+  }
+  .offer-card.highlight .offer-value{color:var(--green);}
+  .offer-card h3{font-size:1rem; margin-bottom:6px; color:var(--navy);}
+  .offer-card p{font-size:.86rem; color:#666; margin-bottom:0;}
+  .offer-card .code{
+    display:inline-block; margin-top:12px; font-size:.75rem; font-weight:700;
+    background:#FFF3D9; color:var(--yellow-deep); padding:4px 10px; border-radius:6px;
+  }
+
+  section{padding:50px 0;}
+  .eyebrow{
+    text-transform:uppercase; letter-spacing:.08em; font-size:.78rem; font-weight:700;
+    color:var(--yellow-deep); margin-bottom:8px;
+  }
+  h2.section-title{font-size:1.6rem; font-weight:800; color:var(--navy); margin-bottom:6px;}
+  .section-sub{color:#5c6370; margin-bottom:28px; max-width:560px;}
+
+  /* Why choose - milestone row like route stops */
+  .milestones{display:flex; flex-wrap:wrap; gap:0; position:relative;}
+  .milestones::before{
+    content:""; position:absolute; top:20px; left:0; right:0; height:2px;
+    background:repeating-linear-gradient(90deg, var(--line) 0 10px, transparent 10px 18px);
+    z-index:0;
+  }
+  .milestone{
+    flex:1 1 180px; text-align:center; position:relative; z-index:1; padding:0 10px 10px;
+  }
+  .milestone .pin{
+    width:40px; height:40px; border-radius:50%; background:var(--navy); color:var(--yellow);
+    display:flex; align-items:center; justify-content:center; margin:0 auto 12px;
+    font-weight:800; font-family:'Baloo 2',sans-serif; font-size:1.05rem;
+    border:4px solid var(--cream);
+  }
+  .milestone h3{font-size:1rem; margin-bottom:4px; color:var(--navy);}
+  .milestone p{font-size:.86rem; color:#666;}
+
+  /* Routes table */
+  .routes-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px;}
+  .route-card{
+    background:#fff; border:1px solid var(--line); border-radius:12px; padding:20px;
+    position:relative; overflow:hidden;
+  }
+  .route-card .tag{
+    display:inline-block; font-size:.72rem; font-weight:700; color:var(--yellow-deep);
+    background:#FFF3D9; padding:3px 10px; border-radius:999px; margin-bottom:10px;
+  }
+  .route-card h3{font-size:1.05rem; color:var(--navy); margin-bottom:4px;}
+  .route-card .dist{font-size:.82rem; color:#888; margin-bottom:14px;}
+  .route-card .price-row{display:flex; justify-content:space-between; font-size:.88rem; padding:6px 0; border-top:1px dashed var(--line);}
+  .route-card .price-row span:last-child{font-weight:700; color:var(--navy);}
+  .route-card .cta{margin-top:14px; width:100%; text-align:center;}
+
+  /* Booking form */
+  .book-section{background:var(--navy); color:#fff;}
+  .book-flex{display:flex; gap:36px; flex-wrap:wrap; align-items:flex-start;}
+  .book-flex .info{flex:1 1 280px;}
+  .book-flex .form-card{flex:1 1 340px; background:#fff; color:var(--charcoal); border-radius:14px; padding:26px;}
+  .book-flex h2{color:#fff;}
+  .book-flex .info ul{margin-top:16px; list-style:none;}
+  .book-flex .info li{padding:8px 0; display:flex; gap:10px; font-size:.94rem; color:#dbe1ec;}
+  .book-flex .info li .ico{color:var(--yellow); font-weight:800;}
+  .field{margin-bottom:14px;}
+  .field label{display:block; font-size:.82rem; font-weight:700; margin-bottom:5px; color:#444;}
+  .field input, .field select{
+    width:100%; padding:10px 12px; border:1px solid #d8d8d8; border-radius:8px; font-size:.94rem; font-family:inherit;
+  }
+  .field-row{display:flex; gap:10px;}
+  .field-row .field{flex:1;}
+  .submit-btn{
+    width:100%; background:var(--green); color:#fff; padding:13px; border:none; border-radius:9px;
+    font-weight:800; font-size:1rem; cursor:pointer; margin-top:4px;
+  }
+  .form-note{font-size:.76rem; color:#888; margin-top:10px; text-align:center;}
+
+  /* Testimonials */
+  .testi-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:16px;}
+  .testi{background:#fff; border:1px solid var(--line); border-radius:12px; padding:20px;}
+  .testi .stars{color:var(--yellow-deep); margin-bottom:10px; font-size:.9rem;}
+  .testi p{font-size:.9rem; color:#444; margin-bottom:12px;}
+  .testi .name{font-weight:700; font-size:.86rem; color:var(--navy);}
+
+  /* FAQ */
+  .faq-item{border-bottom:1px solid var(--line); padding:16px 0;}
+  .faq-item summary{cursor:pointer; font-weight:700; color:var(--navy); font-size:.98rem; list-style:none; display:flex; justify-content:space-between;}
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary::after{content:"+"; font-size:1.3rem; color:var(--yellow-deep);}
+  .faq-item[open] summary::after{content:"–";}
+  .faq-item p{margin-top:10px; color:#555; font-size:.92rem;}
+
+  /* Sticky mobile CTA */
+  .mobile-cta{
+    position:fixed; bottom:0; left:0; right:0; z-index:60;
+    display:flex; gap:10px; padding:10px; background:#fff; border-top:1px solid var(--line);
+    box-shadow:0 -4px 14px rgba(0,0,0,.08);
+  }
+  .mobile-cta .btn{flex:1; justify-content:center;}
+  @media(min-width:761px){.mobile-cta{display:none;}}
+  @media(max-width:760px){ body{padding-bottom:64px;} .hero h1{font-size:1.6rem;} }
+
+  footer{background:var(--navy-2); color:#aab4c6; padding:26px 0; font-size:.82rem; text-align:center;}
+  footer a{text-decoration:underline;}
+</style>
+</head>
+<body>
+
+<div class="callbar">
+  <div class="brand"><span class="dot"></span> RaipurTaxi</div>
+  <div class="actions">
+    <a class="btn btn-call" href="tel:+919575955655">📞 Call Now</a>
+    <a class="btn btn-wa" href="https://wa.me/919575955655?text=Hi%2C%20mujhe%20taxi%20book%20karni%20hai" target="_blank">WhatsApp</a>
+  </div>
+</div>
+
+<div class="offer-strip">
+  🎉 <strong>Return Booking par 15% OFF</strong> &nbsp;|&nbsp; Pehli booking par <strong>Flat ₹200 OFF</strong> — Code: <strong>NEW200</strong>
+</div>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="offer-badge">⚡ Return Trip Book Karein Aur 15% Bachayein</span>
+    <h1>Raipur ki <span>sabse bharosemand</span> Taxi Service — Ab ₹15/km se shuru</h1>
+    <p class="sub">Local ride ho, airport transfer ho ya outstation trip — verified drivers, clean cars aur transparent pricing ke saath, bina kisi hidden charge ke.</p>
+    <div class="ctas">
+      <a class="btn btn-yellow btn-lg" href="tel:+919575955655">📞 Abhi Call Karein: 95759 55655</a>
+      <a class="btn btn-wa btn-lg" href="https://wa.me/919575955655?text=Hi%2C%20mujhe%20taxi%20book%20karni%20hai" target="_blank">💬 WhatsApp Par Book Karein</a>
+    </div>
+    <div class="trust-row">
+      <div class="item"><span class="ico">✓</span> 5000+ khush customers</div>
+      <div class="item"><span class="ico">✓</span> Verified &amp; background-checked drivers</div>
+      <div class="item"><span class="ico">✓</span> 24/7 booking support</div>
+      <div class="item"><span class="ico">✓</span> GPS live tracking</div>
+    </div>
+  </div>
+</section>
+
+<div class="route-divider">
+  <svg preserveAspectRatio="none" viewBox="0 0 400 26"><line x1="0" y1="13" x2="400" y2="13" stroke="#F5B31D" stroke-width="3" stroke-dasharray="14 10"/></svg>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Kyun RaipurTaxi</div>
+    <h2 class="section-title">Har trip par yeh milta hai</h2>
+    <p class="section-sub">Chhote local ride se lekar interstate trip tak, ek hi standard.</p>
+    <div class="milestones">
+      <div class="milestone"><div class="pin">1</div><h3>Fixed Fare</h3><p>Booking se pehle hi poora estimate, koi surprise nahi.</p></div>
+      <div class="milestone"><div class="pin">2</div><h3>Verified Driver</h3><p>License check + background verification.</p></div>
+      <div class="milestone"><div class="pin">3</div><h3>Clean Car</h3><p>Sanitized AC vehicles, har trip se pehle check.</p></div>
+      <div class="milestone"><div class="pin">4</div><h3>24/7 Support</h3><p>Raat ho ya din, call/WhatsApp hamesha available.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#fff;">
+  <div class="wrap">
+    <div class="eyebrow">Offers</div>
+    <h2 class="section-title">Abhi ke chalte offers</h2>
+    <p class="section-sub">Ek offer se zyada ka fayda uthayein — sab combine ho sakte hain.</p>
+    <div class="offers-grid">
+      <div class="offer-card highlight">
+        <div class="offer-icon">🔁</div>
+        <div class="offer-value">15% OFF</div>
+        <h3>Return / Round Trip Booking</h3>
+        <p>Wahi trip par return booking bhi karein aur poori return fare par 15% discount paayein.</p>
+        <span class="code">Code: RETURN15</span>
+      </div>
+      <div class="offer-card">
+        <div class="offer-icon">🆕</div>
+        <div class="offer-value">₹200 OFF</div>
+        <h3>Pehli Booking Discount</h3>
+        <p>Naye customers ke liye — apni pehli ride par flat ₹200 ka discount.</p>
+        <span class="code">Code: NEW200</span>
+      </div>
+      <div class="offer-card">
+        <div class="offer-icon">🤝</div>
+        <div class="offer-value">₹150 OFF</div>
+        <h3>Refer &amp; Earn</h3>
+        <p>Apne dost ko refer karein — dost ko discount, aapko agli ride par ₹150 off.</p>
+        <span class="code">Code: REFER150</span>
+      </div>
+      <div class="offer-card">
+        <div class="offer-icon">👥</div>
+        <div class="offer-value">10% OFF</div>
+        <h3>Group / Wedding Booking</h3>
+        <p>Tempo Traveller ya 2+ gaadiyon ki booking par (shaadi, group tour) special discount.</p>
+        <span class="code">Code: GROUP10</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--cream);">
+  <div class="wrap">
+    <div class="eyebrow">Popular Routes</div>
+    <h2 class="section-title">Sabse zyada book kiye jaane wale trips</h2>
+    <p class="section-sub">All-inclusive package rates — toll/state tax jahan applicable, alag se mention hai.</p>
+    <div class="routes-grid">
+      <div class="route-card">
+        <span class="tag">ONE WAY</span>
+        <h3>Raipur → Bilaspur</h3>
+        <div class="dist">Approx 115 KM</div>
+        <div class="price-row"><span>Swift Dzire</span><span>₹2,999</span></div>
+        <div class="price-row"><span>Maruti Ertiga</span><span>₹4,499</span></div>
+        <div class="price-row"><span>Innova Crysta</span><span>₹5,999</span></div>
+        <a class="btn btn-yellow cta" href="#book">Yeh Route Book Karein</a>
+      </div>
+      <div class="route-card">
+        <span class="tag">AIRPORT TRANSFER</span>
+        <h3>Swami Vivekananda Airport</h3>
+        <div class="dist">Fixed rate, Raipur city</div>
+        <div class="price-row"><span>Swift Dzire</span><span>₹999</span></div>
+        <div class="price-row"><span>Maruti Ertiga</span><span>₹1,499</span></div>
+        <div class="price-row"><span>Innova Crysta</span><span>₹2,199</span></div>
+        <a class="btn btn-yellow cta" href="#book">Airport Cab Book Karein</a>
+      </div>
+      <div class="route-card">
+        <span class="tag">TOUR PACKAGE</span>
+        <h3>Raipur → Jagdalpur (3 Din)</h3>
+        <div class="dist">Bastar Sightseeing</div>
+        <div class="price-row"><span>Swift Dzire</span><span>₹9,999</span></div>
+        <div class="price-row"><span>Maruti Ertiga</span><span>₹13,999</span></div>
+        <div class="price-row"><span>Innova Crysta</span><span>₹17,999</span></div>
+        <a class="btn btn-yellow cta" href="#book">Package Book Karein</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="route-divider">
+  <svg preserveAspectRatio="none" viewBox="0 0 400 26"><line x1="0" y1="13" x2="400" y2="13" stroke="#F5B31D" stroke-width="3" stroke-dasharray="14 10"/></svg>
+</div>
+
+<section class="book-section" id="book">
+  <div class="wrap book-flex">
+    <div class="info">
+      <div class="eyebrow" style="color:var(--yellow);">Booking</div>
+      <h2 class="section-title">Apni ride 30 second me book karein</h2>
+      <p style="color:#c9d2e2;">Form bhariye — submit karte hi WhatsApp par redirect hoga jahan se aap details confirm kar sakte hain.</p>
+      <ul>
+        <li><span class="ico">📞</span> +91 95759 55655</li>
+        <li><span class="ico">✉️</span> manojsinghparmar555@gmail.com</li>
+        <li><span class="ico">📍</span> Santoshi Nagar, Raipur, Chhattisgarh 492001</li>
+      </ul>
+    </div>
+    
+    <!-- PHP form submission ke liye method="POST" set kiya aur JavaScript hata diya -->
+    <form class="form-card" id="bookingForm" method="POST" action="">
+      <!-- Ek hidden input conversion track karne ke liye event trigger karne help karega ya submit par -->
+      <div class="field">
+        <label>Naam</label>
+        <input type="text" name="fname" placeholder="Aapka naam" required>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label>Mobile Number</label>
+          <input type="tel" name="fphone" placeholder="10-digit number" required>
+        </div>
+        <div class="field">
+          <label>Car Type</label>
+          <select name="fcar">
+            <option>Swift Dzire (₹15/km)</option>
+            <option>Maruti Ertiga (₹20/km)</option>
+            <option>Toyota Innova (₹25/km)</option>
+            <option>Innova Crysta (₹26/km)</option>
+            <option>Tempo Traveller (₹32/km)</option>
+          </select>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label>Pickup Location</label>
+          <input type="text" name="fpickup" placeholder="Kahan se">
+        </div>
+        <div class="field">
+          <label>Drop Location</label>
+          <input type="text" name="fdrop" placeholder="Kahan tak">
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label>Date &amp; Time</label>
+          <input type="datetime-local" name="fdate">
+        </div>
+        <div class="field">
+          <label>Offer Apply Karein</label>
+          <select name="foffer">
+            <option value="RETURN15">Return Trip - 15% OFF</option>
+            <option value="NEW200">Pehli Booking - ₹200 OFF</option>
+            <option value="REFER150">Refer &amp; Earn - ₹150 OFF</option>
+            <option value="GROUP10">Group/Wedding - 10% OFF</option>
+            <option value="NONE">Koi offer nahi</option>
+          </select>
+        </div>
+      </div>
+      <button type="submit" name="submit_booking" class="submit-btn" onclick="trackConversion()">WhatsApp Par Booking Bhejein →</button>
+      <p class="form-note">Submit karte hi WhatsApp khulega, wahan se confirm karein.</p>
+    </form>
+  </div>
+</section>
+
+<section style="background:#fff;">
+  <div class="wrap">
+    <div class="eyebrow">Customer Reviews</div>
+    <h2 class="section-title">Log kya kehte hain</h2>
+    <div class="testi-grid">
+      <div class="testi"><div class="stars">★★★★★</div><p>"Excellent service! Sedan book kiya Bilaspur ke liye. Driver time par tha aur gaadi bilkul clean thi."</p><div class="name">Rahul Sharma</div></div>
+      <div class="testi"><div class="stars">★★★★★</div><p>"Airport pickup liya, bahut convenient aur reasonable price. Ertiga me saara luggage aa gaya."</p><div class="name">Priya Patel</div></div>
+      <div class="testi"><div class="stars">★★★★★</div><p>"Chhattisgarh ki best taxi service. Corporate travel ke liye Nagpur baar-baar use kiya, bahut professional."</p><div class="name">Amit Verma</div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">FAQ</div>
+    <h2 class="section-title">Aksar puche jaane wale sawaal</h2>
+    <details class="faq-item" open>
+      <summary>Kya outstation cab milti hai?</summary>
+      <p>Haan, hum Raipur se Chhattisgarh, MP, Maharashtra, AP aur Odisha tak outstation cabs provide karte hain.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Swift Dzire aur Ertiga ka rate kya hai?</summary>
+      <p>Sedan (Swift Dzire) ₹15/km aur SUV (Ertiga) ₹20/km se shuru. Toll aur parking alag se, actual receipts ke hisaab se.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Kya drivers verified hote hain?</summary>
+      <p>Haan, saare drivers ka background check hota hai aur valid commercial license hona zaroori hai.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Offers kaise use karein?</summary>
+      <p>WhatsApp ya call par booking karte waqt offer code mention karein — <strong>RETURN15</strong> (return trip par 15% off), <strong>NEW200</strong> (pehli booking par ₹200 off), <strong>REFER150</strong> (refer karne par ₹150 off), ya <strong>GROUP10</strong> (group/wedding booking par 10% off). Ek se zyada offer applicable ho toh hamari team confirm kar degi.</p>
+    </details>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    RaipurTaxi — Santoshi Nagar, Raipur, Chhattisgarh 492001 &nbsp;|&nbsp;
+    <a href="tel:+919575955655">+91 95759 55655</a> &nbsp;|&nbsp;
+    <a href="https://raipurtaxi.com">raipurtaxi.com</a>
+    <p style="margin-top:8px;">© 2026 RaipurTaxi. All rights reserved.</p>
+  </div>
+</footer>
+
+<div class="mobile-cta">
+  <a class="btn btn-call" href="tel:+919575955655">📞 Call</a>
+  <a class="btn btn-wa" href="https://wa.me/919575955655?text=Hi%2C%20mujhe%20taxi%20book%20karni%20hai" target="_blank">💬 WhatsApp</a>
+</div>
+
+<script>
+// Conversion Tracking ke liye function (click hote hi fire hoga)
+function trackConversion() {
+  if(typeof gtag === 'function') {
+    gtag('event', 'conversion', {
+      'send_to': 'AW-XXXXXXXXX/YYYYYYYYYYYYYYYYYYY', // Ise apne Ads Conversion ID se replace karein
+      'value': 1.0,
+      'currency': 'INR'
+    });
+  }
+}
+</script>
+
+</body>
+</html>
