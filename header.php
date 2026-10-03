@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" class="light">
 <head>
     <meta charset="UTF-8">
@@ -83,10 +83,7 @@ $seo_canonical = isset($canonical_url) ? $canonical_url : "https://raipurtaxi.co
 </head>
 <body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-200 transition-colors duration-300">
 
-    <!-- Loader -->
-    <div class="loader-wrapper" id="loader">
-        <span class="loader"></span>
-    </div>
+    
 
     <!-- Navbar -->
     <nav class="fixed w-full z-50 transition-all duration-300 glass-card dark:glass-dark" id="navbar">
@@ -164,3 +161,4 @@ $seo_canonical = isset($canonical_url) ? $canonical_url : "https://raipurtaxi.co
 
     <!-- Main Content Wrapper -->
     <main class="min-h-screen pt-20">
+

@@ -47,6 +47,12 @@ include 'header.php';
         <div class="w-full max-w-md">
             
             <!-- Hero Text -->
+            <div class="mb-4 text-center md:text-left">
+                <div class="inline-flex items-center gap-2 bg-gradient-to-r from-red-600 to-red-500 text-white px-3 py-1.5 rounded-lg shadow-lg border border-red-400 animate-pulse">
+                    <i class="fa-solid fa-gift text-yellow-300"></i>
+                    <span class="text-[11px] font-bold tracking-wide uppercase">Limited Offer: Flat 20% OFF on Round Trips!</span>
+                </div>
+            </div>
             <div class="mb-6 text-center md:text-left">
                 <span class="inline-block py-1 px-3 rounded-full bg-primary/20 text-primary text-[10px] font-bold tracking-wider mb-2 border border-primary/30 uppercase backdrop-blur-sm">Taxi & Tours</span>
                 <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight leading-tight mb-2 text-white drop-shadow-lg">

@@ -17,6 +17,10 @@ include 'header.php';
     
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <span class="inline-block py-1.5 px-4 rounded-full bg-primary/20 text-primary text-xs font-bold tracking-wider mb-4 border border-primary/30 uppercase">Premium Outstation Taxi</span>
+        <div class="inline-flex items-center gap-2 bg-gradient-to-r from-red-600 to-red-500 text-white px-4 py-2 rounded-xl shadow-lg border border-red-400 animate-pulse mb-6 mt-2">
+            <i class="fa-solid fa-gift text-yellow-300"></i>
+            <span class="text-sm font-bold tracking-wide uppercase">Special Offer: Flat 20% OFF on Round Trips!</span>
+        </div>
         <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4 drop-shadow-lg leading-tight">
             <span class="text-primary"><?php echo $from; ?></span> to <span class="text-primary"><?php echo $to; ?></span> Taxi Service
         </h1>
