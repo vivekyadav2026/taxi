@@ -33,9 +33,9 @@ include 'header.php';
     <!-- Banner Background -->
     <div class="absolute inset-0 z-0 overflow-hidden bg-gray-900">
         <!-- Mobile Background Image -->
-        <img src="assets/images/hero_mobile.jpg" alt="Taxi Service Banner Mobile" class="w-full h-full object-cover object-top block md:hidden">
+        <img src="assets/images/hero_mobile.jpg" fetchpriority="high" decoding="sync" alt="Taxi Service Banner Mobile" class="w-full h-full object-cover object-top block md:hidden">
         <!-- Desktop Background Image -->
-        <img src="assets/images/hero_girl.jpg" alt="Raipur Taxi and Tours" class="w-full h-full object-cover object-right -scale-x-100 hidden md:block">
+        <img src="assets/images/hero_girl.jpg" fetchpriority="high" decoding="sync" alt="Raipur Taxi and Tours" class="w-full h-full object-cover object-right -scale-x-100 hidden md:block">
         
         <!-- Gradient overlay: Bottom-to-top on mobile, Right-to-left on desktop -->
         <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/80 to-gray-900/50 md:bg-gradient-to-l md:from-gray-900/90 md:via-gray-900/50 md:to-transparent"></div>
@@ -181,7 +181,7 @@ include 'header.php';
             <div class="bg-gray-50 dark:bg-gray-850 rounded-3xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-850 hover-card-effect flex flex-col justify-between">
                 <div>
                     <div class="relative overflow-hidden aspect-[4/3] bg-gray-200">
-                        <img src="assets/images/swift_dzire.png" alt="Swift Dzire" class="w-full h-full object-cover">
+                        <img src="assets/images/swift_dzire.png" loading="lazy" decoding="async" alt="Swift Dzire" class="w-full h-full object-cover">
                         <span class="absolute top-4 left-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-secondary font-bold px-3 py-1 rounded-full text-xs shadow-md">POPULAR</span>
                     </div>
                     <div class="p-6 pb-2">
@@ -217,7 +217,7 @@ include 'header.php';
             <div class="bg-gray-50 dark:bg-gray-850 rounded-3xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-850 hover-card-effect flex flex-col justify-between">
                 <div>
                     <div class="relative overflow-hidden aspect-[4/3] bg-gray-200">
-                        <img src="assets/images/ertiga.png" alt="Maruti Ertiga" class="w-full h-full object-cover">
+                        <img src="assets/images/ertiga.png" loading="lazy" decoding="async" alt="Maruti Ertiga" class="w-full h-full object-cover">
                         <span class="absolute top-4 left-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-secondary font-bold px-3 py-1 rounded-full text-xs shadow-md">BUDGET SUV</span>
                     </div>
                     <div class="p-6 pb-2">
@@ -253,7 +253,7 @@ include 'header.php';
             <div class="bg-gray-50 dark:bg-gray-850 rounded-3xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-850 hover-card-effect flex flex-col justify-between">
                 <div>
                     <div class="relative overflow-hidden aspect-[4/3] bg-gray-200">
-                        <img src="assets/images/innova.png" alt="Toyota Innova" class="w-full h-full object-cover">
+                        <img src="assets/images/innova.png" loading="lazy" decoding="async" alt="Toyota Innova" class="w-full h-full object-cover">
                         <span class="absolute top-4 left-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-secondary font-bold px-3 py-1 rounded-full text-xs shadow-md">RELIABLE</span>
                     </div>
                     <div class="p-6 pb-2">
@@ -289,7 +289,7 @@ include 'header.php';
             <div class="bg-gray-50 dark:bg-gray-850 rounded-3xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-850 hover-card-effect flex flex-col justify-between">
                 <div>
                     <div class="relative overflow-hidden aspect-[4/3] bg-gray-200">
-                        <img src="assets/images/crysta.png" alt="Innova Crysta" class="w-full h-full object-cover">
+                        <img src="assets/images/crysta.png" loading="lazy" decoding="async" alt="Innova Crysta" class="w-full h-full object-cover">
                         <span class="absolute top-4 left-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-secondary font-bold px-3 py-1 rounded-full text-xs shadow-md">PREMIUM LUXURY</span>
                     </div>
                     <div class="p-6 pb-2">
@@ -325,7 +325,7 @@ include 'header.php';
             <div class="bg-gray-50 dark:bg-gray-850 rounded-3xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-850 hover-card-effect flex flex-col justify-between lg:col-span-2 lg:max-w-2xl lg:mx-auto">
                 <div class="flex flex-col md:flex-row">
                     <div class="relative overflow-hidden md:w-1/2 aspect-[4/3] bg-gray-200 flex-shrink-0">
-                        <img src="assets/images/tempo_traveller.png" alt="Tempo Traveller" class="w-full h-full object-cover">
+                        <img src="assets/images/tempo_traveller.png" loading="lazy" decoding="async" alt="Tempo Traveller" class="w-full h-full object-cover">
                         <span class="absolute top-4 left-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-secondary font-bold px-3 py-1 rounded-full text-xs shadow-md">GROUP TOURIST</span>
                     </div>
                     <div class="p-6 pb-2 flex-grow flex flex-col justify-between">
@@ -555,7 +555,7 @@ include 'header.php';
 <!-- Explore Tourism CTA Section -->
 <section class="py-16 md:py-20 relative bg-gray-900 border-y border-gray-800">
     <div class="absolute inset-0 z-0">
-        <img src="assets/images/tours/chitrakote-waterfalls.jpg" alt="Chhattisgarh Tourism" class="w-full h-full object-cover opacity-30" onerror="this.src='assets/images/taxi_right.jpg'">
+        <img src="assets/images/tours/chitrakote-waterfalls.jpg" loading="lazy" decoding="async" alt="Chhattisgarh Tourism" class="w-full h-full object-cover opacity-30" onerror="this.src='assets/images/taxi_right.jpg'">
         <div class="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/90 to-transparent"></div>
     </div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
@@ -587,7 +587,7 @@ include 'header.php';
             <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-2xl relative">
                 <i class="fa-solid fa-quote-left text-4xl text-primary/20 absolute top-4 left-4"></i>
                 <div class="flex items-center gap-4 mb-6 relative z-10">
-                    <img src="https://i.pravatar.cc/150?img=11" alt="User" class="w-16 h-16 rounded-full border-2 border-primary">
+                    <img loading="lazy" src="https://i.pravatar.cc/150?img=11" alt="User" class="w-16 h-16 rounded-full border-2 border-primary">
                     <div>
                         <h4 class="font-bold text-gray-800 dark:text-white">Rahul Sharma</h4>
                         <div class="text-primary text-sm">
@@ -601,7 +601,7 @@ include 'header.php';
             <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-2xl relative">
                 <i class="fa-solid fa-quote-left text-4xl text-primary/20 absolute top-4 left-4"></i>
                 <div class="flex items-center gap-4 mb-6 relative z-10">
-                    <img src="https://i.pravatar.cc/150?img=32" alt="User" class="w-16 h-16 rounded-full border-2 border-primary">
+                    <img loading="lazy" src="https://i.pravatar.cc/150?img=32" alt="User" class="w-16 h-16 rounded-full border-2 border-primary">
                     <div>
                         <h4 class="font-bold text-gray-800 dark:text-white">Priya Patel</h4>
                         <div class="text-primary text-sm">
@@ -615,7 +615,7 @@ include 'header.php';
             <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-2xl relative">
                 <i class="fa-solid fa-quote-left text-4xl text-primary/20 absolute top-4 left-4"></i>
                 <div class="flex items-center gap-4 mb-6 relative z-10">
-                    <img src="https://i.pravatar.cc/150?img=68" alt="User" class="w-16 h-16 rounded-full border-2 border-primary">
+                    <img loading="lazy" src="https://i.pravatar.cc/150?img=68" alt="User" class="w-16 h-16 rounded-full border-2 border-primary">
                     <div>
                         <h4 class="font-bold text-gray-800 dark:text-white">Amit Verma</h4>
                         <div class="text-primary text-sm">

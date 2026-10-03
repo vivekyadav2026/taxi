@@ -44,7 +44,7 @@ include 'tour_data.php';
             <div class="bg-white dark:bg-gray-800 rounded-3xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-700 flex flex-col hover:shadow-2xl transition-all duration-300 group">
                 <div class="relative h-56 overflow-hidden bg-gray-200 dark:bg-gray-700">
                     <!-- Fallback to placeholder if image not found -->
-                    <img src="<?php echo file_exists($dest['image']) ? $dest['image'] : 'assets/images/taxi_right.jpg'; ?>" alt="<?php echo $dest['alt']; ?>" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" loading="lazy">
+                    <img src="<?php echo file_exists($dest['image']) ? $dest['image'] : 'assets/images/taxi_right.jpg'; ?>" alt="<?php echo $dest['alt']; ?>" loading="lazy" decoding="async" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" loading="lazy">
                     <div class="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/40 to-transparent"></div>
                     <div class="absolute bottom-4 left-4 right-4">
                         <h3 class="text-xl font-bold text-white mb-1"><?php echo $dest['name']; ?></h3>
