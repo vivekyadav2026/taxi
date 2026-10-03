@@ -360,9 +360,9 @@ endif;
                     <label class="text-xs font-bold uppercase tracking-wider text-gray-400 block mb-2">Select Driver</label>
                     <select id="quick-driver-select" onchange="autoFillDriver()" class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-700 outline-none bg-gray-50 dark:bg-gray-950 focus:ring-2 focus:ring-primary transition">
                         <option value="custom">-- Enter Custom Driver Details --</option>
-                        <option value="raj" data-name="Raj Kumar Parmar" data-phone="+91 9575955655" data-plate="CG-04-ME-1122">Raj Kumar Parmar (Dzire)</option>
-                        <option value="sohan" data-name="Sohan Singh Parmar" data-phone="+91 9575955655" data-plate="CG-04-DF-4455">Sohan Singh Parmar (Ertiga)</option>
-                        <option value="amit" data-name="Amit Rajput" data-phone="+91 9575955655" data-plate="CG-04-KH-7788">Amit Rajput (Innova Crysta)</option>
+                        <option value="raj" data-name="Raj Kumar Parmar" data-phone="+91 9183555655" data-plate="CG-04-ME-1122">Raj Kumar Parmar (Dzire)</option>
+                        <option value="sohan" data-name="Sohan Singh Parmar" data-phone="+91 9183555655" data-plate="CG-04-DF-4455">Sohan Singh Parmar (Ertiga)</option>
+                        <option value="amit" data-name="Amit Rajput" data-phone="+91 9183555655" data-plate="CG-04-KH-7788">Amit Rajput (Innova Crysta)</option>
                         <option value="devendra" data-name="Devendra Verma" data-phone="+91 9827123456" data-plate="CG-04-HZ-5678">Devendra Verma (Innova)</option>
                     </select>
                 </div>

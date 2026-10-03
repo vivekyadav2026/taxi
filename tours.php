@@ -84,8 +84,8 @@ include 'tour_data.php';
                 <h4 class="text-xl font-bold text-gray-850 dark:text-white mb-2"><?php echo $pkg['title']; ?></h4>
                 <p class="text-sm text-gray-600 dark:text-gray-400 mb-6 border-b border-gray-200 dark:border-gray-700 pb-4"><?php echo $pkg['desc']; ?></p>
                 <div class="flex gap-3">
-                    <a href="https://wa.me/919575955655?text=Hi%20I%20want%20a%20quote%20for%20<?php echo urlencode($pkg['title']); ?>" target="_blank" class="flex-1 bg-[#25D366] hover:bg-[#1ebd5c] text-white text-center py-2.5 rounded-xl font-bold transition-colors text-sm"><i class="fa-brands fa-whatsapp"></i> Get Quote</a>
-                    <a href="tel:+919575955655" class="flex-1 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-800 dark:text-white text-center py-2.5 rounded-xl font-bold transition-colors text-sm"><i class="fa-solid fa-phone"></i> Call Now</a>
+                    <a href="https://wa.me/919183555655?text=Hi%20I%20want%20a%20quote%20for%20<?php echo urlencode($pkg['title']); ?>" target="_blank" class="flex-1 bg-[#25D366] hover:bg-[#1ebd5c] text-white text-center py-2.5 rounded-xl font-bold transition-colors text-sm"><i class="fa-brands fa-whatsapp"></i> Get Quote</a>
+                    <a href="tel:+919183555655" class="flex-1 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-800 dark:text-white text-center py-2.5 rounded-xl font-bold transition-colors text-sm"><i class="fa-solid fa-phone"></i> Call Now</a>
                 </div>
             </div>
             <?php endforeach; ?>

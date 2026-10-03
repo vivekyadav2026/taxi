@@ -43,7 +43,7 @@ include 'header.php';
                     <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300 font-semibold"><i class="fa-solid fa-shield-halved text-primary text-xl"></i> 24/7 Support and Tracking for Safety</li>
                 </ul>
                 <div class="flex gap-4">
-                    <a href="https://wa.me/919575955655" class="bg-[#25D366] hover:bg-[#1ebd5c] text-white px-8 py-3.5 rounded-xl font-bold transition shadow-lg flex items-center gap-2"><i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp Us</a>
+                    <a href="https://wa.me/919183555655" class="bg-[#25D366] hover:bg-[#1ebd5c] text-white px-8 py-3.5 rounded-xl font-bold transition shadow-lg flex items-center gap-2"><i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp Us</a>
                     <a href="contact.php" class="bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 text-gray-900 dark:text-white px-8 py-3.5 rounded-xl font-bold transition">Send Inquiry</a>
                 </div>
             </div>

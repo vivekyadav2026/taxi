@@ -402,7 +402,7 @@ window.handleBookingSubmit = function(event) {
 Please confirm my booking.`;
 
     const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/919575955655?text=${encodedMessage}`;
+    const whatsappUrl = `https://wa.me/919183555655?text=${encodedMessage}`;
     
     // Redirect to WhatsApp
     window.open(whatsappUrl, '_blank');
@@ -491,7 +491,7 @@ window.confirmBookingWhatsApp = function() {
     msg += `Please confirm my taxi request and send driver details!`;
 
     const encoded = encodeURIComponent(msg);
-    const waUrl = `https://wa.me/919575955655?text=${encoded}`;
+    const waUrl = `https://wa.me/919183555655?text=${encoded}`;
     
     // Track locally first as completed WhatsApp request
     saveBookingLocally("WhatsApp Requested");
@@ -669,9 +669,9 @@ function simulateDriverAssignment(bookingId) {
     // Phase 2 -> Phase 3 (Driver Assigned after 8 seconds)
     setTimeout(() => {
         const driversList = [
-            { name: "Raj Kumar Parmar", phone: "+91 9575955655", carNo: "CG-04-ME-1122" },
-            { name: "Sohan Singh Parmar", phone: "+91 9575955655", carNo: "CG-04-DF-4455" },
-            { name: "Amit Rajput", phone: "+91 9575955655", carNo: "CG-04-KH-7788" }
+            { name: "Raj Kumar Parmar", phone: "+91 9183555655", carNo: "CG-04-ME-1122" },
+            { name: "Sohan Singh Parmar", phone: "+91 9183555655", carNo: "CG-04-DF-4455" },
+            { name: "Amit Rajput", phone: "+91 9183555655", carNo: "CG-04-KH-7788" }
         ];
         const selected = driversList[Math.floor(Math.random() * driversList.length)];
         updateBookingStatus(bookingId, "Driver Assigned", selected.name, selected.phone, selected.carNo);

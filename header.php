@@ -69,6 +69,16 @@ $seo_canonical = isset($canonical_url) ? $canonical_url : "https://raipurtaxi.co
             }
         }
     </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JP3H1G4K9H">
+</script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-JP3H1G4K9H');
+    </script>
 </head>
 <body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-200 transition-colors duration-300">
 

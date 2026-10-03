@@ -1,4 +1,24 @@
-<?php include 'header.php'; ?>
+<?php 
+$page_title = "Contact Us | Book Raipur Taxi & Tours";
+$meta_desc = "Get in touch with Raipur Taxi for affordable and safe local rides, outstation cabs, and Chhattisgarh tour packages. Call or WhatsApp us directly.";
+$meta_keywords = "Contact Raipur Taxi, Book Cab Raipur, Taxi Phone Number Raipur";
+$schema_data = '{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact Raipur Taxi",
+  "description": "Contact page for Raipur Taxi & Tour Travel",
+  "mainEntity": {
+    "@type": "Organization",
+    "name": "Raipur Taxi",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+91-9183555655",
+      "contactType": "Customer Service"
+    }
+  }
+}';
+include 'header.php'; 
+?>
 
 <!-- Page Header -->
 <section class="pt-32 pb-20 bg-gray-900 relative overflow-hidden">
@@ -24,7 +44,7 @@
                     <div>
                         <h4 class="font-bold text-gray-800 dark:text-white mb-1">Phone</h4>
                         <p class="text-gray-600 dark:text-gray-400 text-sm mb-2">24/7 Booking & Support</p>
-                        <a href="tel:+919575955655" class="text-lg font-bold text-primary hover:underline">+91 9575955655</a>
+                        <a href="tel:+919183555655" class="text-lg font-bold text-primary hover:underline">+91 9183555655</a>
                     </div>
                 </div>
 
@@ -61,7 +81,7 @@
                 </a>
 
                 <!-- WhatsApp CTA -->
-                <a href="https://wa.me/919575955655?text=Hi%2C%20I%20want%20to%20book%20a%20taxi." target="_blank" class="block w-full bg-[#25D366] text-white p-4 rounded-2xl shadow-lg hover:bg-[#1ebd5c] transition text-center font-bold flex items-center justify-center gap-2">
+                <a href="https://wa.me/919183555655?text=Hi%2C%20I%20want%20to%20book%20a%20taxi." target="_blank" class="block w-full bg-[#25D366] text-white p-4 rounded-2xl shadow-lg hover:bg-[#1ebd5c] transition text-center font-bold flex items-center justify-center gap-2">
                     <i class="fa-brands fa-whatsapp text-2xl"></i> Chat on WhatsApp
                 </a>
             </div>

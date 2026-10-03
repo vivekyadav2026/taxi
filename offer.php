@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_booking'])) {
            "Offer Code: " . $offer;
 
     // URL Encode karke WhatsApp link banayein
-    $whatsapp_url = "https://wa.me/919575955655?text=" . urlencode($msg);
+    $whatsapp_url = "https://wa.me/919183555655?text=" . urlencode($msg);
 
     // Redirect to WhatsApp
     header("Location: " . $whatsapp_url);
@@ -55,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_booking'])) {
   "name": "RaipurTaxi",
   "url": "https://raipurtaxi.com",
   "description": "Raipur ki sabse bharosemand Taxi Service — Ab ₹15/km se shuru.",
-  "telephone": "+919575955655",
+  "telephone": "+919183555655",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Santoshi Nagar",
@@ -303,8 +303,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_booking'])) {
 <div class="callbar">
   <div class="brand"><span class="dot"></span> RaipurTaxi</div>
   <div class="actions">
-    <a class="btn btn-call" href="tel:+919575955655">📞 Call Now</a>
-    <a class="btn btn-wa" href="https://wa.me/919575955655?text=Hi%2C%20mujhe%20taxi%20book%20karni%20hai" target="_blank">WhatsApp</a>
+    <a class="btn btn-call" href="tel:+919183555655">📞 Call Now</a>
+    <a class="btn btn-wa" href="https://wa.me/919183555655?text=Hi%2C%20mujhe%20taxi%20book%20karni%20hai" target="_blank">WhatsApp</a>
   </div>
 </div>
 
@@ -318,8 +318,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_booking'])) {
     <h1>Raipur ki <span>sabse bharosemand</span> Taxi Service — Ab ₹15/km se shuru</h1>
     <p class="sub">Local ride ho, airport transfer ho ya outstation trip — verified drivers, clean cars aur transparent pricing ke saath, bina kisi hidden charge ke.</p>
     <div class="ctas">
-      <a class="btn btn-yellow btn-lg" href="tel:+919575955655">📞 Abhi Call Karein: 95759 55655</a>
-      <a class="btn btn-wa btn-lg" href="https://wa.me/919575955655?text=Hi%2C%20mujhe%20taxi%20book%20karni%20hai" target="_blank">💬 WhatsApp Par Book Karein</a>
+      <a class="btn btn-yellow btn-lg" href="tel:+919183555655">📞 Abhi Call Karein: 95759 55655</a>
+      <a class="btn btn-wa btn-lg" href="https://wa.me/919183555655?text=Hi%2C%20mujhe%20taxi%20book%20karni%20hai" target="_blank">💬 WhatsApp Par Book Karein</a>
     </div>
     <div class="trust-row">
       <div class="item"><span class="ico">✓</span> 5000+ khush customers</div>
@@ -533,15 +533,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_booking'])) {
 <footer>
   <div class="wrap">
     RaipurTaxi — Santoshi Nagar, Raipur, Chhattisgarh 492001 &nbsp;|&nbsp;
-    <a href="tel:+919575955655">+91 95759 55655</a> &nbsp;|&nbsp;
+    <a href="tel:+919183555655">+91 95759 55655</a> &nbsp;|&nbsp;
     <a href="https://raipurtaxi.com">raipurtaxi.com</a>
     <p style="margin-top:8px;">© 2026 RaipurTaxi. All rights reserved.</p>
   </div>
 </footer>
 
 <div class="mobile-cta">
-  <a class="btn btn-call" href="tel:+919575955655">📞 Call</a>
-  <a class="btn btn-wa" href="https://wa.me/919575955655?text=Hi%2C%20mujhe%20taxi%20book%20karni%20hai" target="_blank">💬 WhatsApp</a>
+  <a class="btn btn-call" href="tel:+919183555655">📞 Call</a>
+  <a class="btn btn-wa" href="https://wa.me/919183555655?text=Hi%2C%20mujhe%20taxi%20book%20karni%20hai" target="_blank">💬 WhatsApp</a>
 </div>
 
 <script>

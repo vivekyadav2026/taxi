@@ -18,7 +18,7 @@ $schema_data = '{
         "postalCode": "492001",
         "addressCountry": "IN"
       },
-      "telephone": "+919575955655",
+      "telephone": "+919183555655",
       "priceRange": "₹₹",
       "url": "https://raipurtaxi.com"
     }
@@ -100,13 +100,13 @@ include 'header.php';
             </div>
             
             <div class="mt-5 flex flex-wrap gap-3 items-center justify-center md:justify-start">
-                <a href="tel:+919575955655" class="inline-flex items-center justify-center gap-2 bg-white/5 hover:bg-white/15 border border-white/10 backdrop-blur-md px-3.5 py-1.5 rounded-full text-white text-[11px] uppercase font-bold tracking-wider transition-all shadow-lg hover:shadow-blue-500/20 group">
+                <a href="tel:+919183555655" class="inline-flex items-center justify-center gap-2 bg-white/5 hover:bg-white/15 border border-white/10 backdrop-blur-md px-3.5 py-1.5 rounded-full text-white text-[11px] uppercase font-bold tracking-wider transition-all shadow-lg hover:shadow-blue-500/20 group">
                     <div class="w-6 h-6 rounded-full bg-blue-500/20 border border-blue-400/30 flex items-center justify-center text-blue-400 text-[10px] group-hover:bg-blue-500 group-hover:text-white transition-colors">
                         <i class="fa-solid fa-phone"></i>
                     </div>
                     Call Now
                 </a>
-                <a href="https://wa.me/919575955655?text=Hi%2C%20I%20want%20to%20book%20a%20taxi." target="_blank" class="inline-flex items-center justify-center gap-2 bg-white/5 hover:bg-white/15 border border-white/10 backdrop-blur-md px-3.5 py-1.5 rounded-full text-white text-[11px] uppercase font-bold tracking-wider transition-all shadow-lg hover:shadow-[#25D366]/20 group">
+                <a href="https://wa.me/919183555655?text=Hi%2C%20I%20want%20to%20book%20a%20taxi." target="_blank" class="inline-flex items-center justify-center gap-2 bg-white/5 hover:bg-white/15 border border-white/10 backdrop-blur-md px-3.5 py-1.5 rounded-full text-white text-[11px] uppercase font-bold tracking-wider transition-all shadow-lg hover:shadow-[#25D366]/20 group">
                     <div class="w-6 h-6 rounded-full bg-[#25D366]/20 border border-[#25D366]/30 flex items-center justify-center text-[#25D366] text-[11px] group-hover:bg-[#25D366] group-hover:text-white transition-colors">
                         <i class="fa-brands fa-whatsapp"></i>
                     </div>
@@ -567,7 +567,7 @@ include 'header.php';
                 <a href="tours.php" class="bg-primary text-gray-900 px-8 py-3.5 rounded-full font-bold hover:bg-yellow-500 transition shadow-[0_0_15px_rgba(255,215,0,0.4)] flex items-center justify-center gap-2">
                     <i class="fa-solid fa-earth-asia text-lg"></i> Explore Tour Packages
                 </a>
-                <a href="tel:+919575955655" class="bg-white/10 text-white border border-white/20 px-8 py-3.5 rounded-full font-bold hover:bg-white/20 transition backdrop-blur-sm flex items-center justify-center gap-2">
+                <a href="tel:+919183555655" class="bg-white/10 text-white border border-white/20 px-8 py-3.5 rounded-full font-bold hover:bg-white/20 transition backdrop-blur-sm flex items-center justify-center gap-2">
                     <i class="fa-solid fa-phone"></i> Call for Queries
                 </a>
             </div>
@@ -716,7 +716,7 @@ include 'header.php';
                         <a href="#book" class="bg-primary hover:bg-yellow-500 text-secondary px-8 py-3.5 rounded-2xl font-bold transition duration-300 transform hover:-translate-y-1 shadow-lg" data-translate="webapp-btn-book">
                             <i class="fa-solid fa-taxi mr-2"></i> Book A Cab Instantly
                         </a>
-                        <a href="https://wa.me/919575955655?text=Hi%2C%20I%20want%20to%20book%20a%20taxi." target="_blank" class="bg-[#25D366] hover:bg-[#1ebd5c] text-white px-8 py-3.5 rounded-2xl font-bold transition duration-300 transform hover:-translate-y-1 shadow-lg flex items-center gap-2" data-translate="webapp-btn-wa">
+                        <a href="https://wa.me/919183555655?text=Hi%2C%20I%20want%20to%20book%20a%20taxi." target="_blank" class="bg-[#25D366] hover:bg-[#1ebd5c] text-white px-8 py-3.5 rounded-2xl font-bold transition duration-300 transform hover:-translate-y-1 shadow-lg flex items-center gap-2" data-translate="webapp-btn-wa">
                             <i class="fa-brands fa-whatsapp text-xl"></i> WhatsApp Booking
                         </a>
                     </div>

@@ -157,7 +157,7 @@ include 'header.php';
                         
                         <a href="index.php#book" class="block w-full bg-primary hover:bg-yellow-500 text-gray-900 py-3.5 rounded-xl font-bold transition-colors mb-3">Book Taxi Online</a>
                         
-                        <a href="https://wa.me/919575955655?text=Hi%2C%20I%20need%20a%20cab%20for%20<?php echo urlencode($dest['name']); ?>" target="_blank" class="block w-full bg-[#25D366] hover:bg-[#1ebd5c] text-white py-3.5 rounded-xl font-bold transition-colors flex items-center justify-center gap-2">
+                        <a href="https://wa.me/919183555655?text=Hi%2C%20I%20need%20a%20cab%20for%20<?php echo urlencode($dest['name']); ?>" target="_blank" class="block w-full bg-[#25D366] hover:bg-[#1ebd5c] text-white py-3.5 rounded-xl font-bold transition-colors flex items-center justify-center gap-2">
                             <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp Us
                         </a>
                     </div>

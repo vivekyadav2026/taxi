@@ -56,7 +56,7 @@
                         </li>
                         <li class="flex items-center gap-3">
                             <i class="fa-solid fa-phone text-primary"></i>
-                            <a href="tel:+919575955655" class="text-gray-400 hover:text-white transition">+91 9575955655</a>
+                            <a href="tel:+919183555655" class="text-gray-400 hover:text-white transition">+91 9183555655</a>
                         </li>
                         <li class="flex items-center gap-3">
                             <i class="fa-solid fa-envelope text-primary"></i>
@@ -77,7 +77,7 @@
     </footer>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/919575955655?text=Hi%2C%20I%20want%20to%20book%20a%20taxi." target="_blank" class="floating-whatsapp" aria-label="Chat on WhatsApp">
+    <a href="https://wa.me/919183555655?text=Hi%2C%20I%20want%20to%20book%20a%20taxi." target="_blank" class="floating-whatsapp" aria-label="Chat on WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
