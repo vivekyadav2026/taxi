@@ -76,13 +76,23 @@
         </div>
     </footer>
 
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/919183555655?text=Hi%2C%20I%20want%20to%20book%20a%20taxi." target="_blank" class="floating-whatsapp" aria-label="Chat on WhatsApp">
+    <!-- Mobile Sticky Bottom CTA -->
+    <div class="fixed bottom-0 left-0 w-full z-[100] flex md:hidden shadow-[0_-4px_10px_rgba(0,0,0,0.1)]">
+        <a href="tel:+9183555655" class="flex-1 bg-white dark:bg-gray-800 text-gray-900 dark:text-white py-3.5 text-center font-bold border-t-2 border-primary text-sm flex items-center justify-center gap-2">
+            <i class="fa-solid fa-phone text-primary text-lg"></i> Call Now
+        </a>
+        <a href="https://wa.me/919183555655?text=Hi%2C%20I%20want%20to%20book%20a%20taxi." target="_blank" class="flex-1 bg-[#25D366] text-white py-3.5 text-center font-bold border-t-2 border-[#1ebd5c] text-sm flex items-center justify-center gap-2">
+            <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp
+        </a>
+    </div>
+
+    <!-- Floating WhatsApp Button (Desktop) -->
+    <a href="https://wa.me/919183555655?text=Hi%2C%20I%20want%20to%20book%20a%20taxi." target="_blank" class="floating-whatsapp hidden md:flex" aria-label="Chat on WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <!-- Floating Call Button -->
-    <a href="tel:+9183555655" class="floating-call" aria-label="Call Us">
+    <!-- Floating Call Button (Desktop) -->
+    <a href="tel:+9183555655" class="floating-call hidden md:flex" aria-label="Call Us">
         <i class="fa-solid fa-phone"></i>
     </a>
 

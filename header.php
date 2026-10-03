@@ -134,11 +134,14 @@ $seo_canonical = isset($canonical_url) ? $canonical_url : "https://raipurtaxi.co
                         <span id="lang-text-mobile">HI</span>
                     </button>
 
-                    <button id="theme-toggle-mobile" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition">
+                    <button id="theme-toggle-mobile" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition hidden sm:block">
                         <i class="fa-solid fa-moon text-gray-600 dark:text-gray-300 hidden" id="theme-toggle-dark-icon-mobile"></i>
                         <i class="fa-solid fa-sun text-yellow-400 hidden" id="theme-toggle-light-icon-mobile"></i>
                     </button>
-                    <button id="mobile-menu-btn" class="text-gray-700 dark:text-gray-300 hover:text-primary focus:outline-none">
+                    <a href="https://wa.me/919183555655?text=Hi" target="_blank" class="bg-[#25D366] text-white px-3 py-1.5 rounded-full text-xs font-bold flex items-center gap-1.5 shadow-md">
+                        <i class="fa-brands fa-whatsapp"></i> Book
+                    </a>
+                    <button id="mobile-menu-btn" class="text-gray-700 dark:text-gray-300 hover:text-primary focus:outline-none ml-1">
                         <i class="fa-solid fa-bars text-2xl"></i>
                     </button>
                 </div>

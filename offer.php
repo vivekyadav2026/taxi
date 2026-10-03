@@ -318,7 +318,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_booking'])) {
     <h1>Raipur ki <span>sabse bharosemand</span> Taxi Service — Ab ₹15/km se shuru</h1>
     <p class="sub">Local ride ho, airport transfer ho ya outstation trip — verified drivers, clean cars aur transparent pricing ke saath, bina kisi hidden charge ke.</p>
     <div class="ctas">
-      <a class="btn btn-yellow btn-lg" href="tel:+919183555655">📞 Abhi Call Karein: 95759 55655</a>
+      <a class="btn btn-yellow btn-lg" href="tel:+919183555655">📞 Abhi Call Karein: 91835 55655</a>
       <a class="btn btn-wa btn-lg" href="https://wa.me/919183555655?text=Hi%2C%20mujhe%20taxi%20book%20karni%20hai" target="_blank">💬 WhatsApp Par Book Karein</a>
     </div>
     <div class="trust-row">
@@ -434,7 +434,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_booking'])) {
       <h2 class="section-title">Apni ride 30 second me book karein</h2>
       <p style="color:#c9d2e2;">Form bhariye — submit karte hi WhatsApp par redirect hoga jahan se aap details confirm kar sakte hain.</p>
       <ul>
-        <li><span class="ico">📞</span> +91 95759 55655</li>
+        <li><span class="ico">📞</span> +91 91835 55655</li>
         <li><span class="ico">✉️</span> manojsinghparmar555@gmail.com</li>
         <li><span class="ico">📍</span> Santoshi Nagar, Raipur, Chhattisgarh 492001</li>
       </ul>
@@ -533,7 +533,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_booking'])) {
 <footer>
   <div class="wrap">
     RaipurTaxi — Santoshi Nagar, Raipur, Chhattisgarh 492001 &nbsp;|&nbsp;
-    <a href="tel:+919183555655">+91 95759 55655</a> &nbsp;|&nbsp;
+    <a href="tel:+919183555655">+91 91835 55655</a> &nbsp;|&nbsp;
     <a href="https://raipurtaxi.com">raipurtaxi.com</a>
     <p style="margin-top:8px;">© 2026 RaipurTaxi. All rights reserved.</p>
   </div>

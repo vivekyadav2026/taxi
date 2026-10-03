@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Redirect to route.php for SEO friendly taxi routes
+RewriteRule ^(.*)-to-(.*)-taxi/?$ route.php?from=$1&to=$2 [L,QSA]
+
+# Optional: Clean URLs for other pages (e.g., /about instead of /about.php)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
