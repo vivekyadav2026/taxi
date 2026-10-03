@@ -26,7 +26,7 @@ $seo_canonical = isset($canonical_url) ? $canonical_url : "https://raipurtaxi.co
     <meta property="og:description" content="<?php echo $seo_desc; ?>">
     <meta property="og:type" content="website">
     <meta property="og:url" content="<?php echo $seo_canonical; ?>">
-
+    <meta name="google-site-verification" content="XMkjvJGoLcJSQCBs8WLqFo3rH68rUDaWFAmIs4LZ_c4" />
     <?php if(isset($schema_data)): ?>
     <!-- Structured Data (Schema.org) -->
     <script type="application/ld+json">
