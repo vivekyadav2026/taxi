@@ -16,12 +16,21 @@ $service = isset($_GET['service']) ? htmlspecialchars($_GET['service']) : ($to =
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
+                    colors: { primary: '#FFD700', dark: '#111827', accent: '#FBBF24' }
+                }
+            }
+        }
+    </script>
+    
     <!-- Preload and Defer FontAwesome -->
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
-    
-    <!-- Precompiled Tailwind CSS -->
-    <link rel="stylesheet" href="assets/css/output.css?v=2">
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #f8fafc; }
         .pb-safe { padding-bottom: env(safe-area-inset-bottom); }
