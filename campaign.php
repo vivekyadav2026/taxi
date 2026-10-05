@@ -47,10 +47,10 @@ $service = isset($_GET['service']) ? htmlspecialchars($_GET['service']) : ($to =
     <!-- Minimal Header (No distractions) -->
     <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-4 h-20 flex justify-between items-center">
-            <div class="flex items-center gap-2">
+            <a href="index.php" class="flex items-center gap-2">
                 <img src="assets/images/logo.png" alt="RaipurTaxi Logo" class="h-12 w-auto object-contain">
                 <span class="font-extrabold text-2xl text-dark hidden sm:block">Raipur<span class="text-primary">Taxi</span></span>
-            </div>
+            </a>
         </div>
     </header>
 
