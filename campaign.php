@@ -89,11 +89,11 @@ $service = isset($_GET['service']) ? htmlspecialchars($_GET['service']) : ($to =
                 </h1>
                 <p class="text-gray-600 text-lg md:text-xl mb-6 font-medium leading-relaxed">Top-rated sanitised cabs, professional drivers, and absolutely zero hidden charges. Get a confirmed cab in just 2 minutes.</p>
                 
-                <div class="flex flex-wrap items-center gap-3 mb-8">
-                    <a href="https://wa.me/919183555655?text=Hi%2C%20I%20saw%20the%20Google%20Ad.%20I%20want%20to%20book%20a%20taxi." target="_blank" class="bg-[#25D366] hover:bg-[#20ba59] text-white px-6 py-3.5 rounded-2xl font-extrabold text-sm sm:text-base transition-all shadow-lg shadow-green-500/25 flex items-center gap-2.5 transform hover:-translate-y-0.5" onclick="gtag('event', 'conversion', {'send_to': 'AW-CONVERSION_ID/whatsapp_click'});">
+                <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 mb-8">
+                    <a href="https://wa.me/919183555655?text=Hi%2C%20I%20saw%20the%20Google%20Ad.%20I%20want%20to%20book%20a%20taxi." target="_blank" class="w-full sm:w-auto justify-center bg-[#25D366] hover:bg-[#20ba59] text-white px-6 py-3.5 rounded-2xl font-extrabold text-sm sm:text-base transition-all shadow-lg shadow-green-500/25 flex items-center gap-2.5 transform hover:-translate-y-0.5" onclick="gtag('event', 'conversion', {'send_to': 'AW-CONVERSION_ID/whatsapp_click'});">
                         <i class="fa-brands fa-whatsapp text-2xl"></i> Chat &amp; Book on WhatsApp
                     </a>
-                    <a href="tel:+919183555655" class="bg-dark hover:bg-black text-white px-6 py-3.5 rounded-2xl font-extrabold text-sm sm:text-base transition-all shadow-md flex items-center gap-2.5 transform hover:-translate-y-0.5" onclick="gtag('event', 'conversion', {'send_to': 'AW-CONVERSION_ID/call_click'});">
+                    <a href="tel:+919183555655" class="w-full sm:w-auto justify-center bg-dark hover:bg-black text-white px-6 py-3.5 rounded-2xl font-extrabold text-sm sm:text-base transition-all shadow-md flex items-center gap-2.5 transform hover:-translate-y-0.5" onclick="gtag('event', 'conversion', {'send_to': 'AW-CONVERSION_ID/call_click'});">
                         <i class="fa-solid fa-phone text-primary"></i> Call: +91 9183555655
                     </a>
                 </div>
