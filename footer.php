@@ -86,9 +86,15 @@
         </a>
     </div>
 
-    <!-- Floating WhatsApp Button (Desktop) -->
-    <a href="https://wa.me/919183555655?text=Hi%2C%20I%20want%20to%20book%20a%20taxi." target="_blank" class="floating-whatsapp hidden md:flex" aria-label="Chat on WhatsApp">
-        <i class="fa-brands fa-whatsapp"></i>
+    <!-- Floating WhatsApp Widget (All Devices) -->
+    <a href="https://wa.me/919183555655?text=Hi%2C%20I%20want%20to%20book%20a%20taxi." target="_blank" class="fixed z-[100] bottom-20 right-4 md:bottom-8 md:right-8 flex items-center gap-3 group" aria-label="Chat on WhatsApp">
+        <div class="bg-white px-4 py-2 rounded-xl shadow-lg border border-gray-100 text-sm font-bold text-gray-800 hidden md:block opacity-0 group-hover:opacity-100 translate-x-4 group-hover:translate-x-0 transition-all duration-300 whitespace-nowrap">
+            Need a ride? Chat with us!
+        </div>
+        <div class="w-14 h-14 md:w-[60px] md:h-[60px] bg-[#25D366] text-white rounded-full flex items-center justify-center text-3xl shadow-[0_4px_15px_rgba(37,211,102,0.4)] relative hover:scale-110 transition-transform">
+            <i class="fa-brands fa-whatsapp relative z-10"></i>
+            <div class="absolute inset-0 bg-[#25D366] rounded-full animate-ping opacity-75"></div>
+        </div>
     </a>
 
     <!-- Floating Call Button (Desktop) -->
@@ -113,7 +119,7 @@
             </div>
 
             <!-- Close Button -->
-            <button onclick="closeOffersModal()" class="absolute top-4 right-4 bg-black/40 hover:bg-black/70 text-white w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-md transition z-20">
+            <button onclick="closeOffersModal()" aria-label="Close offers" class="absolute top-4 right-4 bg-black/40 hover:bg-black/70 text-white w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-md transition z-20">
                 <i class="fa-solid fa-xmark text-sm"></i>
             </button>
             
@@ -248,4 +254,6 @@
 
 </body>
 </html>
+
+
 

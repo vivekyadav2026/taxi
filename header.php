@@ -50,21 +50,21 @@ $seo_canonical = isset($canonical_url) ? $canonical_url : "https://raipurtaxi.co
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
-            darkMode: 'class',
+            darkMode: "class",
             theme: {
                 extend: {
                     colors: {
-                        primary: '#FFD700', // Taxi Yellow
-                        secondary: '#111827', // Dark Gray/Black
-                        accent: '#FBBF24',
-                        'gray-150': '#EEF1F6',
-                        'gray-250': '#DDE2EC',
-                        'gray-650': '#4B5563',
-                        'gray-655': '#374151',
-                        'gray-850': '#1E2530', // Premium Slate-Dark hybrid for perfect elevation in dark mode
+                        primary: "#FFD700",
+                        secondary: "#111827",
+                        accent: "#FBBF24",
+                        "gray-150": "#EEF1F6",
+                        "gray-250": "#DDE2EC",
+                        "gray-650": "#4B5563",
+                        "gray-655": "#374151",
+                        "gray-850": "#1E2530",
                     },
                     fontFamily: {
-                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        sans: ["\"Plus Jakarta Sans\"", "sans-serif"],
                     }
                 }
             }
@@ -107,13 +107,13 @@ $seo_canonical = isset($canonical_url) ? $canonical_url : "https://raipurtaxi.co
                     <a href="contact.php" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-semibold transition whitespace-nowrap" data-translate="nav-contact">Contact</a>
                     
                     <!-- Language Switcher -->
-                    <button id="lang-toggle" class="px-2.5 py-1.5 flex items-center gap-1.5 rounded-full border border-gray-300 dark:border-gray-650 hover:bg-gray-100 dark:hover:bg-gray-800 transition text-xs font-bold text-gray-700 dark:text-gray-300 hover:border-primary">
+                    <button id="lang-toggle" aria-label="Toggle language" class="px-2.5 py-1.5 flex items-center gap-1.5 rounded-full border border-gray-300 dark:border-gray-650 hover:bg-gray-100 dark:hover:bg-gray-800 transition text-xs font-bold text-gray-700 dark:text-gray-300 hover:border-primary">
                         <i class="fa-solid fa-globe text-primary"></i>
                         <span id="lang-text">HI</span>
                     </button>
 
                     <!-- Dark Mode Toggle -->
-                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition">
+                    <button id="theme-toggle" aria-label="Toggle dark mode" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition">
                         <i class="fa-solid fa-moon text-gray-600 dark:text-gray-300 hidden" id="theme-toggle-dark-icon"></i>
                         <i class="fa-solid fa-sun text-yellow-400 hidden" id="theme-toggle-light-icon"></i>
                     </button>
@@ -127,19 +127,19 @@ $seo_canonical = isset($canonical_url) ? $canonical_url : "https://raipurtaxi.co
                 <!-- Mobile menu button -->
                 <div class="lg:hidden flex items-center gap-3">
                     <!-- Language Switcher Mobile -->
-                    <button id="lang-toggle-mobile" class="px-2 py-1 flex items-center gap-1 rounded-full border border-gray-300 dark:border-gray-650 hover:bg-gray-100 dark:hover:bg-gray-800 transition text-xs font-bold text-gray-700 dark:text-gray-300">
+                    <button id="lang-toggle-mobile" aria-label="Toggle mobile language" class="px-2 py-1 flex items-center gap-1 rounded-full border border-gray-300 dark:border-gray-650 hover:bg-gray-100 dark:hover:bg-gray-800 transition text-xs font-bold text-gray-700 dark:text-gray-300">
                         <i class="fa-solid fa-globe text-primary text-xs"></i>
                         <span id="lang-text-mobile">HI</span>
                     </button>
 
-                    <button id="theme-toggle-mobile" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition hidden sm:block">
+                    <button id="theme-toggle-mobile" aria-label="Toggle mobile dark mode" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition hidden sm:block">
                         <i class="fa-solid fa-moon text-gray-600 dark:text-gray-300 hidden" id="theme-toggle-dark-icon-mobile"></i>
                         <i class="fa-solid fa-sun text-yellow-400 hidden" id="theme-toggle-light-icon-mobile"></i>
                     </button>
                     <a href="https://wa.me/919183555655?text=Hi" target="_blank" class="bg-[#25D366] text-white px-3 py-1.5 rounded-full text-xs font-bold flex items-center gap-1.5 shadow-md">
                         <i class="fa-brands fa-whatsapp"></i> Book
                     </a>
-                    <button id="mobile-menu-btn" class="text-gray-700 dark:text-gray-300 hover:text-primary focus:outline-none ml-1">
+                    <button id="mobile-menu-btn" class="text-gray-700 dark:text-gray-300 hover:text-primary focus:outline-none ml-1" aria-label="Toggle mobile menu">
                         <i class="fa-solid fa-bars text-2xl"></i>
                     </button>
                 </div>
@@ -161,4 +161,7 @@ $seo_canonical = isset($canonical_url) ? $canonical_url : "https://raipurtaxi.co
 
     <!-- Main Content Wrapper -->
     <main class="min-h-screen pt-20">
+
+
+
 
