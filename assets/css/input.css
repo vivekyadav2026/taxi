@@ -1,3 +1,10 @@
-﻿@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@theme {
+  --color-primary: #FFD700;
+  --color-secondary: #111827;
+  --color-dark: #111827;
+  --color-accent: #FBBF24;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+}
+@source "../../*.php";
+@source "../../**/*.php";

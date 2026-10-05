@@ -16,17 +16,8 @@ $service = isset($_GET['service']) ? htmlspecialchars($_GET['service']) : ($to =
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
-                    colors: { primary: '#FFD700', dark: '#111827', accent: '#FBBF24' }
-                }
-            }
-        }
-    </script>
+    <!-- Precompiled Tailwind CSS -->
+    <link rel="stylesheet" href="assets/css/output.css?v=3">
     
     <!-- Preload and Defer FontAwesome -->
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -238,7 +229,7 @@ $service = isset($_GET['service']) ? htmlspecialchars($_GET['service']) : ($to =
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-0 md:px-4">
             <!-- Sedan -->
             <div class="bg-white rounded-[2rem] border border-gray-200 shadow-md hover:shadow-xl transition-all p-6 relative flex flex-col items-center text-center group">
-                <img src="assets/images/swift_dzire.png" alt="Sedan Taxi" class="w-48 h-auto object-contain mb-4 group-hover:scale-110 transition-transform duration-500">
+                <img src="assets/images/swift_dzire.png" loading="lazy" width="300" height="150" alt="Sedan Taxi" class="w-48 h-auto object-contain mb-4 group-hover:scale-110 transition-transform duration-500">
                 <h3 class="text-2xl font-black text-dark">Sedan</h3>
                 <p class="text-gray-500 text-sm font-medium mb-4">Swift Dzire, Etios or similar</p>
                 <div class="bg-gray-50 w-full rounded-2xl py-3 mb-4 border border-gray-100">
@@ -255,7 +246,7 @@ $service = isset($_GET['service']) ? htmlspecialchars($_GET['service']) : ($to =
             <!-- SUV -->
             <div class="bg-white rounded-[2rem] border border-primary shadow-xl p-6 relative flex flex-col items-center text-center group transform md:-translate-y-4">
                 <div class="absolute -top-4 bg-primary text-yellow-900 text-[10px] font-black uppercase tracking-widest px-4 py-1.5 rounded-full shadow-sm">Most Popular</div>
-                <img src="assets/images/ertiga.png" alt="SUV Taxi" class="w-48 h-auto object-contain mb-4 group-hover:scale-110 transition-transform duration-500 mt-2">
+                <img src="assets/images/ertiga.png" loading="lazy" width="300" height="150" alt="SUV Taxi" class="w-48 h-auto object-contain mb-4 group-hover:scale-110 transition-transform duration-500 mt-2">
                 <h3 class="text-2xl font-black text-dark">SUV</h3>
                 <p class="text-gray-500 text-sm font-medium mb-4">Ertiga, Carens or similar</p>
                 <div class="bg-primary/10 w-full rounded-2xl py-3 mb-4 border border-primary/20">
@@ -271,7 +262,7 @@ $service = isset($_GET['service']) ? htmlspecialchars($_GET['service']) : ($to =
             
             <!-- Premium SUV -->
             <div class="bg-white rounded-[2rem] border border-gray-200 shadow-md hover:shadow-xl transition-all p-6 relative flex flex-col items-center text-center group">
-                <img src="assets/images/innova.png" alt="Premium SUV" class="w-48 h-auto object-contain mb-4 group-hover:scale-110 transition-transform duration-500">
+                <img src="assets/images/innova.png" loading="lazy" width="300" height="150" alt="Premium SUV" class="w-48 h-auto object-contain mb-4 group-hover:scale-110 transition-transform duration-500">
                 <h3 class="text-2xl font-black text-dark">Premium SUV</h3>
                 <p class="text-gray-500 text-sm font-medium mb-4">Innova Crysta</p>
                 <div class="bg-gray-50 w-full rounded-2xl py-3 mb-4 border border-gray-100">
@@ -315,7 +306,7 @@ $service = isset($_GET['service']) ? htmlspecialchars($_GET['service']) : ($to =
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             <!-- Tour 1 -->
             <a href="tours.php" class="block relative h-48 rounded-2xl overflow-hidden group shadow-md">
-                <img src="assets/images/tours/jungle-safari-raipur.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" onerror="this.src='assets/images/taxi_right.jpg'">
+                <img src="assets/images/tours/jungle-safari-raipur.jpg" loading="lazy" width="400" height="250" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" onerror="this.src='assets/images/taxi_right.jpg'">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                 <div class="absolute bottom-4 left-4">
                     <h3 class="text-white font-bold text-lg">Nandanvan Safari</h3>
@@ -325,7 +316,7 @@ $service = isset($_GET['service']) ? htmlspecialchars($_GET['service']) : ($to =
             
             <!-- Tour 2 -->
             <a href="tours.php" class="block relative h-48 rounded-2xl overflow-hidden group shadow-md">
-                <img src="assets/images/tours/sirpur-historical-site.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" onerror="this.src='assets/images/hero_girl.jpg'">
+                <img src="assets/images/tours/sirpur-historical-site.jpg" loading="lazy" width="400" height="250" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" onerror="this.src='assets/images/hero_girl.jpg'">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                 <div class="absolute bottom-4 left-4">
                     <h3 class="text-white font-bold text-lg">Sirpur Heritage</h3>
@@ -335,7 +326,7 @@ $service = isset($_GET['service']) ? htmlspecialchars($_GET['service']) : ($to =
             
             <!-- Tour 3 -->
             <a href="tours.php" class="block relative h-48 rounded-2xl overflow-hidden group shadow-md">
-                <img src="assets/images/tours/ghatarani-waterfall-raipur.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" onerror="this.src='assets/images/hero_mobile.jpg'">
+                <img src="assets/images/tours/ghatarani-waterfall-raipur.jpg" loading="lazy" width="400" height="250" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" onerror="this.src='assets/images/hero_mobile.jpg'">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                 <div class="absolute bottom-4 left-4">
                     <h3 class="text-white font-bold text-lg">Ghatarani Falls</h3>
